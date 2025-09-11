@@ -1,50 +1,50 @@
-import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+// Layout
+import UserLayout from './components/layouts/UserLayout';
+
 // Guide
-import GuideLayout from './guide/layout/GuideLayout';
+import SectionPage from './guide/components/SectionPage';
 import ElementPage from './guide/components/ElementPage';
 import FormPage from './guide/components/FormPage';
+import PostPage from './guide/components/PostPage';
 import ModulePage from './guide/components/ModulePage';
 import ModalPage from './guide/components/ModalPage';
 
 // Pages
-import UserLayoutMain from './components/layouts/UserLayoutMain';
-import UserLayoutSub from './components/layouts/UserLayoutSub';
-import Prototype from './pages/templates/Prototype';
-import PostList from './pages/templates/PostList';
-import PostView from './pages/templates/PostView';
-import Main from "./pages/Main";
+import PrototypeA from './pages/template/PrototypeA';
+import PrototypeB from './pages/template/PrototypeB';
+
+import Home from "./pages/main/Home";
 
 // System
 import NotFound from "./NotFound";
 
 const Router = () => {
 	return (
-		<BrowserRouter basename="/MH-User">
+		<BrowserRouter basename="MH-User">
 			<Routes>
-				{/* Layout Guide */}
-				<Route path="/guide" element={<GuideLayout />}>
-					<Route path='/components/ElementPage' element={<ElementPage />} />
-					<Route path='/components/FormPage' element={<FormPage />} />
-					<Route path='/components/ModulePage' element={<ModulePage />} />
-					<Route path='/components/ModalPage' element={<ModalPage />} />
+				{/* Guide */}
+				<Route path='guide/' element={<UserLayout />}>
+					<Route path='components/sections' element={<SectionPage />} />
+					<Route path='components/elements' element={<ElementPage />} />
+					<Route path='components/forms' element={<FormPage />} />
+					<Route path='components/posts' element={<PostPage />} />
+					<Route path='components/modules' element={<ModulePage />} />
+					<Route path='components/modals' element={<ModalPage />} />
 				</Route>
 
-				{/* Layout Main */}
-				<Route path="/pages/" element={<UserLayoutMain />}>
-					<Route path='Main' element={<Main />} />
-				</Route>
+				{/* Pages */}
+				<Route path='pages/' element={<UserLayout />}>
+					{/* Templates */}
+					<Route path='templates/prototypeA' element={<PrototypeA />} />
+					<Route path='templates/prototypeB' element={<PrototypeB />} />
 
-				{/* Layout Sub */}
-				<Route path="/pages/" element={<UserLayoutSub />}>
-					{/* Sub Templates */}
-					<Route path='/templates/Prototype' element={<Prototype />} />
-					<Route path='/templates/PostList' element={<PostList />} />
-					<Route path='/templates/PostView' element={<PostView />} />
+					{/* Main */}
+					<Route path='main/home' index element={<Home />} />
 
-					{/* Sub Category */}
 
+					{/* Category */}
 				</Route>
 				<Route path="*" element={<NotFound />} />
 			</Routes>

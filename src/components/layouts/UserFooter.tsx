@@ -2,7 +2,7 @@ import React from 'react';
 
 const UserFooter = () => {
 	return (
-		<footer className='footer'>
+		<footer className='page-footer'>
 			UserFooter Area
 		</footer>
 	)

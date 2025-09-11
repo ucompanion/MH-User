@@ -1,12 +1,14 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-
-const UserHeader = () => {
-	return (
-		<header className='header'>
-			<NavLink to='/Main/'>Main</NavLink>&nbsp;/&nbsp;
-			<NavLink to='/Pages/Prototype'>Prototype</NavLink>
-		</header>
-	)
+interface HeaderProps {
+	children: React.ReactNode;
 }
+
+const UserHeader: React.FC<HeaderProps> = ({ children }) => {
+	return (
+		<header className='page-header'>
+			<div className="inner">
+				{children}
+			</div>
+		</header>
+	);
+};
 export default UserHeader;

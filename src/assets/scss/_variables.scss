@@ -1,0 +1,63 @@
+@charset 'utf-8';
+// ------------------------------------------------------------------
+//	Variables
+// ------------------------------------------------------------------
+// 기본설정
+$html-font-size: 1px;
+$body-font-family: 'Pretendard Variable', 'sans-serif';
+$body-font-size: 14rem;
+$body-line-height: 22rem;
+
+// 레이아웃 프임임
+$header-height: 60rem;
+$padding-sidespacer: 20rem;
+
+// 컬러 강조
+$color-primary: value;
+$color-secondary: value;
+$color-point1: value;
+
+// 컬러 아이
+$color-item1: value;
+$color-item2: value;
+$color-item3: value;
+
+//-------------------------------------------------------------------
+//    Mixins
+//-------------------------------------------------------------------
+// 레이아웃 시스템
+@mixin inner {
+	width: calc(100% - (#{$padding-sidespacer} * 2));
+	margin-left: auto;
+	margin-right: auto;
+}
+@mixin outer {
+	padding-left: $padding-sidespacer;
+	padding-right: $padding-sidespacer;
+}
+
+// 폰트규칙
+@mixin font-body-10 {
+	font-size: 10px;
+	line-height: 14px;
+}
+
+@mixin font-body-11 {
+	font-size: 11px;
+	line-height: 15px;
+}
+
+@mixin font-body-12 {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+@mixin font-body-13 {
+	font-size: 13px;
+	line-height: 19px;
+}
+
+@mixin font-body-14 {
+	font-size: 14px;
+	line-height: 22px;
+}
