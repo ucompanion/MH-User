@@ -2,7 +2,7 @@ interface HeaderProps {
 	children: React.ReactNode;
 }
 
-const UserHeader: React.FC<HeaderProps> = ({ children }) => {
+const PageHeader: React.FC<HeaderProps> = ({ children }) => {
 	return (
 		<header className='page-header'>
 			<div className="inner">
@@ -11,4 +11,4 @@ const UserHeader: React.FC<HeaderProps> = ({ children }) => {
 		</header>
 	);
 };
-export default UserHeader;
+export default PageHeader;

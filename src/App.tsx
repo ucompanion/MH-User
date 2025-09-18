@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // Layout
-import UserLayout from './components/layouts/UserLayout';
+import PageLayout from './components/layouts/PageLayout';
 
 // Guide
 import SectionPage from './guide/components/SectionPage';
@@ -25,7 +25,7 @@ const Router = () => {
 		<BrowserRouter basename="MH-User">
 			<Routes>
 				{/* Guide */}
-				<Route path='guide/' element={<UserLayout />}>
+				<Route path='guide/' element={<PageLayout />}>
 					<Route path='components/sections' element={<SectionPage />} />
 					<Route path='components/elements' element={<ElementPage />} />
 					<Route path='components/forms' element={<FormPage />} />
@@ -35,7 +35,7 @@ const Router = () => {
 				</Route>
 
 				{/* Pages */}
-				<Route path='pages/' element={<UserLayout />}>
+				<Route path='pages/' element={<PageLayout />}>
 					{/* Templates */}
 					<Route path='templates/prototypeA' element={<PrototypeA />} />
 					<Route path='templates/prototypeB' element={<PrototypeB />} />

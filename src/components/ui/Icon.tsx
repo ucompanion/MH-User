@@ -7,7 +7,7 @@ interface IconProps {
 const Icon: React.FC<IconProps> = ({ name, ...rest }) => {
   const className = `icn ${name}`;
   return (
-    <i className={className} aria-hidden {...rest}></i>
+    <i className={className} aria-hidden="false" {...rest} />
   );
 };
 
