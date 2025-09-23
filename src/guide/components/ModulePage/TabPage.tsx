@@ -8,7 +8,7 @@ const TabPage = () => {
 				<h2 className='section-h2'>Tabs</h2>
 			</div>
 			<div className="section-body">
-				<h3 className="content-h3">module-a</h3>
+				<h3 className="content-h3">demo-a</h3>
 				<Tabs
 					id="tabModuleA"
 					defaultActiveKey="profile"

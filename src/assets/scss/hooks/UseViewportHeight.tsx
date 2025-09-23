@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-function useViewportHeight(): number {
+function UseViewportHeight(): number {
     const [viewportHeight, setViewportHeight] = useState(0);
     const calculateHeight = useCallback(() => {
         const currentHeight = window.innerHeight;
@@ -17,4 +17,4 @@ function useViewportHeight(): number {
     }, [calculateHeight]);
     return viewportHeight;
 }
-export default useViewportHeight;
+export default UseViewportHeight;
