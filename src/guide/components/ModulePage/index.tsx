@@ -4,6 +4,7 @@ import TabPage from './TabPage';
 import AccordionPage from './AccordionPage';
 import PopoverPage from './PopoverPage';
 import ModalPage from './ModalPage';
+import SwiperPage from './SwiperPage';
 
 const ModulePage = () => {
 	return (
@@ -26,6 +27,7 @@ const ModulePage = () => {
 				<AccordionPage />
 				<PopoverPage />
 				<ModalPage />
+				<SwiperPage />
 			</PageBody>
 			{/* // PageBody */}
 

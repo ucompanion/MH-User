@@ -4,9 +4,306 @@
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
-	@@ 분류
+	@@ 메인
 -------------------------------------------------------------------*/
-/* 섹션명 */
+// 섹션 인기검색어
+.popular-section {
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+	gap: 15rem;
+	width: 100%;
+	height: 48rem;
+	overflow: auto;
+
+	.section-header,
+	.section-body {
+		flex: none;
+	}
+
+	.section-h2 {
+		@include font-set(600,14, #000);
+	}
+}
+
+// 키워드 목록
+.keyword-list {
+	flex: none;
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 6rem;
+
+	.btn {
+		flex: none;
+		height: 28rem;
+		padding: 0px 10rem;
+		border-radius: 6rem;
+		@include font-set(400, 15, #725A5A);
+		border-color: var(--color-primary-white);
+		background-color: var(--color-primary-white);
+	}
+}
+.keyword-scroll {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow: auto;
+	margin: 0 calc(var(--padding-sidespacer) * -1);
+	padding: 0 var(--padding-sidespacer);
+	margin-bottom: 16rem;
+}
+
+// 롤링배너 스와이프
+.ad-swiper {
+	&.swiper-custom {
+		--pagination-color: rgba(0,0,0,0.16);
+
+		.swiper-controller {
+			position: absolute;
+			left: 0;
+			bottom: 14rem;
+			z-index: 10;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 10rem;
+			width: 100%;
+		}
+	}
+}
+
+// 고민부위
+.region-list {
+	--region-size: 58rem;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: calc(20% - var(--region-size));
+
+	.btn {
+		width: var(--region-size);
+		height: var(--region-size);
+		border-radius: 50%;
+		span {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(255, 102, 204, 0.6);
+			@include font-set(700,13,#fff);
+			line-height: 1.2;
+			white-space: pre-line;
+		}
+	}
+}
+
+// 띠배너그룹
+.bnr-group {
+	display: flex;
+	flex-direction: column;
+	gap: 16rem;
+}
+
+// 상품카드
+.product-item {
+	margin-top: 16rem;
+	padding-bottom: 25rem;
+	border-bottom: 1px solid rgba(34, 38, 43, 0.09);
+	&:first-child {
+		margin-top: 0;
+	}
+}
+.product-card {
+	display: flex;
+	gap: 18px;
+	.product-imge {
+		flex: noen;
+		.thumb {
+			width: 90rem;
+			height: 90rem;
+			border-radius: 10rem;
+			overflow: hidden;
+			img {
+				@include obj-cover;
+			}
+		}
+	}
+	.product-cont {
+		flex: 1 1 auto;
+		overflow: hidden;
+		.title {
+			@include font-set(600, 19, rgba(0, 0, 0, 1));
+		}
+		.summary {
+			margin-top: 5rem;
+			@include font-set(400, 14, #49515B);
+			@include ellipsis1;
+		}
+		.price {
+			margin-top: 5rem;
+			@include font-set(700, 16, #000000);
+		}
+		.sale {
+			margin-top: 11rem;
+			@include font-set(700, 16, var(--color-primary));
+		}
+	}
+}
+
+// 병원카드
+.hospitel-swiper {
+	&.swiper-custom {
+		.swiper-slide {
+			width: 160rem;
+		}
+	}
+}
+.hospitel-card {
+	display: flex;
+	flex-direction: column;
+	gap: 15rem;
+	.hospitel-imge {
+		.thumb {
+			width: 100%;
+			height: 144rem;
+			border-radius: 10rem;
+			overflow: hidden;
+			img {
+				@include obj-cover;
+			}
+		}
+	}
+	.hospitel-cont {
+		.title {
+			@include font-set(600, 17, #000);
+		}
+		.city {
+			@include font-set(400, 14, #49515B);
+		}
+	}
+}
+
+// 의사카드
+.doctor-list {
+	display: flex;
+	flex-direction: column;
+	gap: 10rem;
+}
+.doctor-card {
+	display: flex;
+	align-items: center;
+	gap: 16rem;
+	.doctor-image {
+		.thumb {
+			display: flex;
+			align-items: flex-start;
+			justify-content: center;
+			width: 120rem;
+			height: 120rem;
+			overflow: hidden;
+			border-radius: 50%;
+			img {
+				width: 100%;
+			}
+		}
+	}
+	.doctor-cont {
+		flex: 1 1 auto;
+		overflow: hidden;
+		.title {
+			@include font-set(600, 17, #000);
+		}
+		.agency {
+			margin-top: 10rem;
+			@include font-set(400, 17, #49515B);
+		}
+		.tags {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 6rem;
+			margin-top: 10rem;
+		}
+	}
+}
+
+// 리뷰카드
+.review-list {
+	display: flex;
+	flex-direction: column;
+	gap: 16rem;
+	.review-item {
+		width: 100%;
+	}
+}
+.review-card {
+	.review-profile {
+		display: flex;
+		align-items: center;
+		gap: 12rem;
+		.avata {
+			flex: none;
+			width: 50rem;
+			height: 50rem;
+			border-radius: 50%;
+			overflow: hidden;
+			img {
+				@include obj-cover;
+			}
+		}
+		.cont {
+			overflow: hidden;
+			flex: 1 1 auto;
+			.nicname {
+				@include font-set(500, 17, #000);
+			}
+			.date {
+				@include font-set(400, 15, #49515B);
+			}
+		}
+	}
+	.review-image {
+		--gap: 12rem;
+		display: flex;
+		gap: var(--gap);
+		margin-top: 20rem;
+		.thumb {
+			position: relative;
+			width: calc(100% - (var(--gap)/2));
+			aspect-ratio: 170/164;
+			overflow: hidden;
+			img {
+				@include obj-cover;
+			}
+			.label {
+				display: block;
+				position: absolute;
+				left: 12rem;
+				top: 7rem;
+				padding: 0 8rem;
+				@include font-set(400, 15, #fff);
+				border-radius: 20rem;
+				background-color: rgba(0, 0, 0, 0.5);
+			}
+		}
+	}
+	.review-cont {
+		margin-top: 20rem;
+		.title {
+			@include font-set(500, 17, #000);
+			@include ellipsis1;
+		}
+		.summary {
+			margin-top: 4rem;
+			@include font-set(400, 17, #49515B);
+			@include ellipsis2;
+		}
+	}
+}
+
 
 /*-------------------------------------------------------------------
 	@@ 팝업명

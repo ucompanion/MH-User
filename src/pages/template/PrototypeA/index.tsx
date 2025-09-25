@@ -1,44 +1,49 @@
-import { useState } from 'react';
 import { Icon } from '../../../components/ui';
-import { PageBody, PageFooter, PageHeader } from '../../../components/layouts';
+import { PageBody, PageHeader, PageNav } from '../../../components/layouts';
 
-const PrototypeA = () => {
-	const [isFavorite, setIsFavorite] = useState(false);
-	const buttonClassName = `btn btn-favorite ${isFavorite ? 'is-on' : ''}`;
+interface PageProps {
+	menu?: string;
+    pageCase?: string; // case prop이 있을 수도, 없을 수도 있음
+}
 
+const PrototypeA: React.FC<PageProps> = ({pageCase}) => {
 	return (
 		<div className='page template-a'>
 			{/* PageHeader */}
 			<PageHeader>
-				<div className="title-area">
-					<button type='button' className='btn btn-back'>
-						<Icon name='icn-back'/>
-						<span className="blind">뒤로가기</span>
-					</button>
-					<h1 className="page-h1">디엠성형외과</h1>
+				<div className='top-area'>
+					<div className="title-area">
+						<div className="site-logo"><span className="blind">디엠성형외과</span></div>
+					</div>
+					<div className='util-area'>
+						<button type='button' className='btn btn-user'>
+							<Icon name='icn-user' />
+							<span className="blind">User</span>
+						</button>
+					</div>
 				</div>
-				<div className='util-area'>
-					<button type='button' className='btn btn-share'>
-						<Icon name='icn-share' />
-						<span className="blind">공유하기</span>
-					</button>
-					<button type='button' className={buttonClassName} onClick={() => { setIsFavorite(!isFavorite); }}>
-						<Icon name='icn-favorite' />
-						<span className="blind">즐겨찾기</span>
-					</button>
+				<div className="srch-area">
+					<div className='srch-frm'>
+						<label htmlFor="srchInput" className='blind'>Enter search term</label>
+						<input type="text" id='srchInput' placeholder='気になる施術や病院名はありますか？' className='input' />
+						<button type='button' className='btn btn-srch'>
+							<Icon name='icn-srch' />
+							<span className="blind">Search</span>
+						</button>
+					</div>
 				</div>
 			</PageHeader>
 			{/* // PageHeader */}
 
 			{/* PageBody */}
 			<PageBody template="template-a">
-				<section className='section' style={{background:'black', height: '200rem'}}>
+				<section className='section'>
 					Page Body
 				</section>
 			</PageBody>
 			{/* // PageBody */}
 
-			<PageFooter />
+			<PageNav />
 		</div>
 	)
 }

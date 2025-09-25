@@ -150,12 +150,15 @@ const ElementPage = () => {
 						<span className='label demo-a fill-item2'>fill-item2</span>
 						<span className='label demo-a fill-item3'>fill-item3</span>
 
-						<h3 className="content-h3">module-a (Items Label)</h3>
+						<h3 className="content-h3">module-a (Basic Label)</h3>
+						<span className='label module-a'>module-a</span>
+
+						<h3 className="content-h3">demo-b (Items Label)</h3>
 						<span className='label demo-a line-item1'>module-a</span>
 						<span className='label demo-a line-item2'>module-a</span>
 						<span className='label demo-a line-item3'>module-a</span>
 
-						<h3 className="content-h3">module-b (States Label)</h3>
+						<h3 className="content-h3">demo-c (States Label)</h3>
 						<span className='label demo-b fill-normal'>module-b</span>
 						<span className='label demo-b fill-primary'>module-b</span>
 						<span className='label demo-b fill-secondary'>module-b</span>

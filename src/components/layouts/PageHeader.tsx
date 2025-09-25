@@ -5,9 +5,7 @@ interface HeaderProps {
 const PageHeader: React.FC<HeaderProps> = ({ children }) => {
 	return (
 		<header className='page-header'>
-			<div className="inner">
-				{children}
-			</div>
+			{children}
 		</header>
 	);
 };

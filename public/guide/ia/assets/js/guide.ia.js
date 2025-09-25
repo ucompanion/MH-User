@@ -1,4 +1,4 @@
-var iaURL = '../../';		// 현황판 작업목록 루트경로
+var iaURL = '/MH-User/#/';		// 현황판 작업목록 루트경로
 var ajaxURL = 'html/';	// 현황판 리스트 URL
 var ia = {
 	baseUrl : 'html/',

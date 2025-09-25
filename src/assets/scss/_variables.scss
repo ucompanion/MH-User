@@ -5,16 +5,18 @@
 :root {
 	// 기본설정
 	--html-font-size: 1px;
-	--body-font-family: 'Pretendard Variable', 'sans-serif';
 	--body-font-size: 14rem;
 	--body-line-height: 1.5;
 
 	// 레이아웃 프임임
-	--header-height: 60rem;
+	--max-width: 600px;
 	--padding-sidespacer: 20rem;
 
 	// 컬러 강조
-	--color-primary: blue;
+	--color-primary-dark: #E91E63;
+	--color-primary: #FF66CC;
+	--color-primary-light: #C58CA7;
+	--color-primary-white: #FBF4F4;
 	--color-secondary: orange;
 	--color-point1: pink;
 
@@ -28,7 +30,6 @@
 	--color-item2: darkred;
 	--color-item3: darkgreen;
 }
-
 $safe-area-bottom: (env(safe-area-inset-bottom, 0)/1.7);
 
 //-------------------------------------------------------------------
@@ -51,7 +52,7 @@ $safe-area-bottom: (env(safe-area-inset-bottom, 0)/1.7);
 
 // Set Fonts
 @mixin font-set($font-weight, $font-size, $color) {
-	$line-height: $font-size * 1.5;
+	$line-height: $font-size * 1.4;
 	$rounded: ceil($line-height);
 
 	@if ($rounded % 2 != 0) {
@@ -80,6 +81,10 @@ $safe-area-bottom: (env(safe-area-inset-bottom, 0)/1.7);
 
 @mixin mask-default {
 	mask: no-repeat center center / contain;
+}
+
+@mixin opacity(){
+
 }
 
 // Utilities
@@ -242,4 +247,17 @@ $safe-area-bottom: (env(safe-area-inset-bottom, 0)/1.7);
 		border-color: transparent;
 		color: var(--color-item3);
 	}
+}
+
+// Object
+@mixin obj-cover {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+@mixin obj-contain {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
 }

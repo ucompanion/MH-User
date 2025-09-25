@@ -2,15 +2,14 @@ import { Outlet } from 'react-router-dom';
 import '../../assets/scss/ui.style.scss';
 import UseViewportHeight from '../../assets/scss/hooks/UseViewportHeight';
 import UseScrollStatus from '../../assets/scss/hooks/UseScrollStatus';
-import { Fragment } from 'react/jsx-runtime';
 
 const PageLayout = () => {
 	UseViewportHeight();
 	UseScrollStatus();
 	return (
-		<Fragment>
+		<div className='page-wrap'>
 			<Outlet />
-		</Fragment>
+		</div>
 	);
 }
 export default PageLayout;
