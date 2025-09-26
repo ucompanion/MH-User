@@ -71,7 +71,11 @@
 .region-list {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
-	gap: 20rem;
+	gap: clamp(10rem,calc((100vw/393)*16) ,16rem);
+
+	.region-item {
+		display: flex;
+	}
 
 	.btn {
 		width: 100%;

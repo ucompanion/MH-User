@@ -20,7 +20,7 @@ const SecRegion = () => {
             <div className="section-body">
                 <ul className='region-list'>
                     {regionItemsData.map((item) => (
-                        <li key={item.id}>
+                        <li className='region-item' key={item.id}>
                             <button type='button' className='btn'>
                                 <img src={"/MH-User/images/contents/"+item.name} alt="" />
                                 <span>{item.text}</span>

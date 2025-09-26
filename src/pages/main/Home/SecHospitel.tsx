@@ -1,8 +1,6 @@
 import ScrollContainer from "react-indiana-drag-scroll";
 import 'react-indiana-drag-scroll/dist/style.css';
 import { Icon } from '../../../components/ui';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
 
 const hospitelKeywordData = [
     { id: 'item1', text: '脂肪吸引' },
