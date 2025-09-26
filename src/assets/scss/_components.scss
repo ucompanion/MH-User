@@ -862,6 +862,10 @@
 		width: 100%;
 	}
 
+	.swiper-wrapper {
+		box-sizing: inherit;
+	}
+
 	.swiper-navigation {
 		button {
 			position: absolute;
@@ -941,6 +945,20 @@
 			&-start {
 				display: block;
 			}
+		}
+	}
+
+	&.is-freemode {
+		overflow: hidden;
+		margin-left: calc(var(--padding-sidespacer) * -1);
+		margin-right: calc(var(--padding-sidespacer) * -1);
+		padding-left: var(--padding-sidespacer);
+		padding-right: var(--padding-sidespacer);
+		.swiper {
+			overflow: visible;
+		}
+		.swiper-slide {
+			width: auto;
 		}
 	}
 }

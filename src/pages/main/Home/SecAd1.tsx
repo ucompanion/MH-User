@@ -69,6 +69,7 @@ const SecAd1 = () => {
                         spaceBetween={50}
                         slidesPerView={1}
                         loop={true}
+                        threshold={3}
                         pagination={{
                             el: '.ad-swiper .swiper-pagination',
                             clickable: false,

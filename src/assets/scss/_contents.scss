@@ -44,11 +44,7 @@
 	}
 }
 .keyword-scroll {
-	display: flex;
-	flex-wrap: nowrap;
-	overflow: auto;
-	margin: 0 calc(var(--padding-sidespacer) * -1);
-	padding: 0 var(--padding-sidespacer);
+	@include outer-scroll;
 	margin-bottom: 16rem;
 }
 
@@ -73,16 +69,13 @@
 
 // 고민부위
 .region-list {
-	--region-size: 58rem;
-
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	gap: calc(20% - var(--region-size));
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	gap: 20rem;
 
 	.btn {
-		width: var(--region-size);
-		height: var(--region-size);
+		width: 100%;
+		aspect-ratio: 1/1;
 		border-radius: 50%;
 		span {
 			display: flex;
@@ -155,17 +148,21 @@
 }
 
 // 병원카드
-.hospitel-swiper {
-	&.swiper-custom {
-		.swiper-slide {
-			width: 160rem;
-		}
+.hospitel-scroll {
+	@include outer-scroll;
+}
+.hospitel-list {
+	display: flex;
+	gap: 10rem;
+	.hospitel-item {
+		flex: none;
 	}
 }
 .hospitel-card {
 	display: flex;
 	flex-direction: column;
 	gap: 15rem;
+	width: 160rem;
 	.hospitel-imge {
 		.thumb {
 			width: 100%;

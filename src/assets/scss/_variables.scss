@@ -83,10 +83,6 @@ $safe-area-bottom: (env(safe-area-inset-bottom, 0)/1.7);
 	mask: no-repeat center center / contain;
 }
 
-@mixin opacity(){
-
-}
-
 // Utilities
 @mixin ellipsis1 {
 	overflow: hidden;
@@ -260,4 +256,12 @@ $safe-area-bottom: (env(safe-area-inset-bottom, 0)/1.7);
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
+}
+
+@mixin outer-scroll {
+	display: flex;
+	flex-wrap: nowrap;
+	overflow: auto;
+	margin: 0 calc(var(--padding-sidespacer) * -1);
+	padding: 0 var(--padding-sidespacer);
 }

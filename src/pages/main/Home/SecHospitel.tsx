@@ -60,14 +60,10 @@ const SecHospitel = () => {
                         ))}
                     </ul>
                 </ScrollContainer>
-                <div className="swiper-custom hospitel-swiper">
-                    <Swiper
-                        spaceBetween={10}
-                        slidesPerView={'auto'}
-                        freeMode={true}
-                    >
+                <ScrollContainer className="hospitel-scroll">
+                    <ul className='hospitel-list'>
                     {hospitelSlides.map((slide) => (
-                        <SwiperSlide key={slide.id}>
+                        <li className="hospitel-item" key={slide.id}>
                             <div className="hospitel-card" role="link">
                                 <div className="hospitel-imge">
                                     <div className="thumb">
@@ -79,10 +75,10 @@ const SecHospitel = () => {
                                     <p className="city">{slide.city}</p>
                                 </div>
                             </div>
-                        </SwiperSlide>
+                        </li>
                     ))}
-                    </Swiper>
-                </div>
+                    </ul>
+                </ScrollContainer>
             </div>
         </section>
 	)
