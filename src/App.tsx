@@ -17,6 +17,8 @@ import PrototypeA from './pages/template/PrototypeA';
 import PrototypeB from './pages/template/PrototypeB';
 
 import Home from "./pages/main/Home";
+import Search from './pages/main/Search';
+import Result from './pages/main/Search/Result';
 
 // System
 import NotFound from "./NotFound";
@@ -44,6 +46,8 @@ const Router = () => {
 
 					{/* Main */}
 					<Route path='main/home' index element={<Home menu='home' />} />
+					<Route path='main/search' index element={<Search />} />
+					<Route path='main/search/result' index element={<Result />} />
 
 
 					{/* Category */}

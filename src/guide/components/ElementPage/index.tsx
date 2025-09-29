@@ -93,7 +93,7 @@ const ElementPage = () => {
 							<span>module-b</span>
 						</button>
 
-						<h3 className="content-h3">module-c (Module Button)</h3>
+						<h3 className="content-h3">module-d (Module Button)</h3>
 						<button type='button' className='btn demo-c fill-normal'>
 							<span>module-c</span>
 						</button>
@@ -107,7 +107,7 @@ const ElementPage = () => {
 							<span>module-c</span>
 						</button>
 
-						<h3 className="content-h3">module-d (Link Button)</h3>
+						<h3 className="content-h3">module-e (Link Button)</h3>
 						<button type='button' className='btn demo-d none-normal'>
 							<span>module-d</span>
 						</button>

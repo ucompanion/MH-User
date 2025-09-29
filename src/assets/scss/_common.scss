@@ -1,4 +1,5 @@
 @charset 'utf-8';
+@use './variables' as *;
 /*-------------------------------------------------------------------
 	분류그룹 : Common
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
@@ -540,6 +541,9 @@ input::-webkit-calendar-picker-indicator {
 			@include outer;
 			z-index: 100;
 
+			.title-area {
+				flex: 1 1 auto;
+			}
 			.title-area,
 			.util-area {
 				display: flex;
@@ -724,8 +728,8 @@ input::-webkit-calendar-picker-indicator {
 	// template-b
 	&.template-b {
 		.page-header {
-			--header-bgcolor: #fff;
-			--header-color: #000;
+			--header-bgcolor: #000;
+			--header-color: #fff;
 		}
 	}
 }

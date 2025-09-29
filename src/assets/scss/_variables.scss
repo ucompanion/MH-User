@@ -1,4 +1,5 @@
 @charset 'utf-8';
+@use 'sass:math';
 // ------------------------------------------------------------------
 //	Variables
 // ------------------------------------------------------------------
@@ -53,7 +54,7 @@ $safe-area-bottom: (env(safe-area-inset-bottom, 0)/1.7);
 // Set Fonts
 @mixin font-set($font-weight, $font-size, $color) {
 	$line-height: $font-size * 1.4;
-	$rounded: ceil($line-height);
+	$rounded: math.ceil($line-height);
 
 	@if ($rounded % 2 != 0) {
 	  $rounded: $rounded + 1;

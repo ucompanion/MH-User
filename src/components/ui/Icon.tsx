@@ -4,10 +4,10 @@ interface IconProps {
   name: string;
 }
 
-const Icon: React.FC<IconProps> = ({ name, ...rest }) => {
+const Icon: React.FC<IconProps> = ({ name }) => {
   const className = `icn ${name}`;
   return (
-    <i className={className} aria-hidden="false" {...rest} />
+    <i className={className} aria-hidden="false" />
   );
 };
 

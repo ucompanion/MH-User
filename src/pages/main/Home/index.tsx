@@ -1,4 +1,4 @@
-import { Icon } from '../../../components/ui';
+import { Icon, SearchForm } from '../../../components/ui';
 import { PageBody, PageHeader, PageNav } from '../../../components/layouts';
 import SecPopular from './SecPopular';
 import SecAd1 from './SecAd1';
@@ -31,14 +31,7 @@ const Main: React.FC<PageProps> = (props) => {
 					</div>
 				</div>
 				<div className="srch-area">
-					<div className='srch-frm'>
-						<label htmlFor="srchInput" className='blind'>Enter search term</label>
-						<input type="text" id='srchInput' placeholder='気になる施術や病院名はありますか？' className='input' />
-						<button type='button' className='btn btn-srch'>
-							<Icon name='icn-srch' />
-							<span className="blind">Search</span>
-						</button>
-					</div>
+					<SearchForm val="" />
 				</div>
 			</PageHeader>
 			{/* // PageHeader */}
