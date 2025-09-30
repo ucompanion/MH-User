@@ -1,13 +1,13 @@
 import { Icon, SearchForm } from '../../../components/ui';
 import { PageBody, PageHeader, PageNav } from '../../../components/layouts';
-import SecPopular from './SecPopular';
-import SecAd1 from './SecAd1';
-import SecRegion from './SecRegion';
-import SecAd2 from './SecAd2';
-import SecProduct from './SecProduct';
-import SecHospitel from './SecHospitel';
-import SecDoctor from './SecDoctor';
-import SecReview from './SecReview';
+import SecPopular from './sections/SecPopular';
+import SecAd1 from './sections/SecAd1';
+import SecRegion from './sections/SecRegion';
+import SecAd2 from './sections/SecAd2';
+import SecProduct from './sections/SecProduct';
+import SecHospitel from './sections/SecHospitel';
+import SecDoctor from './sections/SecDoctor';
+import SecReview from './sections/SecReview';
 
 interface PageProps {
     menu?: string;
@@ -37,7 +37,7 @@ const Main: React.FC<PageProps> = (props) => {
 			{/* // PageHeader */}
 
 			{/* PageBody */}
-			<PageBody template="template-a main-body">
+			<PageBody pageName="main-wrap">
 				{/* Section: 인기검색어 */}
 				<SecPopular />
 

@@ -12,13 +12,24 @@ import PostPage from './guide/components/PostPage';
 import ModulePage from './guide/components/ModulePage';
 import ModalPage from './guide/components/ModalPage';
 
-// Pages
+// Templates
 import PrototypeA from './pages/template/PrototypeA';
 import PrototypeB from './pages/template/PrototypeB';
 
+// Main
 import Home from "./pages/main/Home";
-import Search from './pages/main/Search';
-import Result from './pages/main/Search/Result';
+import Search from './pages/main/Search/index';
+import SearchResult from './pages/main/Search/SearchResult';
+import SearchNodata from './pages/main/Search/SearchNodata';
+
+// Onboarding
+import OnboardingStep1 from "./pages/onboarding/Step1/Step";
+import OnboardingStep2A from "./pages/onboarding/Step2/StepA";
+import OnboardingStep2B from "./pages/onboarding/Step2/StepB";
+import OnboardingStep3A from "./pages/onboarding/Step3/StepA";
+import OnboardingStep3B from "./pages/onboarding/Step3/StepB";
+import OnboardingStep4A from "./pages/onboarding/Step4/StepA";
+import OnboardingStep4B from "./pages/onboarding/Step4/StepB";
 
 // System
 import NotFound from "./NotFound";
@@ -46,9 +57,18 @@ const Router = () => {
 
 					{/* Main */}
 					<Route path='main/home' index element={<Home menu='home' />} />
-					<Route path='main/search' index element={<Search />} />
-					<Route path='main/search/result' index element={<Result />} />
+					<Route path='main/search/index' index element={<Search />} />
+					<Route path='main/search/result' index element={<SearchResult />} />
+					<Route path='main/search/nodata' index element={<SearchNodata />} />
 
+					{/* Onboarding */}
+					<Route path='onboarding/step1' index element={<OnboardingStep1 />} />
+					<Route path='onboarding/step2A' index element={<OnboardingStep2A />} />
+					<Route path='onboarding/step2B' index element={<OnboardingStep2B />} />
+					<Route path='onboarding/step3A' index element={<OnboardingStep3A />} />
+					<Route path='onboarding/step3B' index element={<OnboardingStep3B />} />
+					<Route path='onboarding/step4A' index element={<OnboardingStep4A />} />
+					<Route path='onboarding/step4B' index element={<OnboardingStep4B />} />
 
 					{/* Category */}
 				</Route>

@@ -1,4 +1,4 @@
-import { Icon } from "../../../components/ui";
+import { Icon } from "../../../../components/ui";
 
 const reviewItems = [
     {
@@ -16,8 +16,6 @@ const reviewItems = [
         id: 'item2',
         link: './detail/ad-promotion-1', // 데모링크
         avataSrc: '/MH-User/images/data/avata-user-02.png',
-        beforeSrc: '/MH-User/images/data/thumb-review-02-before.jpg',
-        afterSrc: '/MH-User/images/data/thumb-review-02-after.jpg',
         nicname: 'グローバル美人',
         date: '2025.09.24',
         title: '二重切開・鼻プロテーゼ',
@@ -48,6 +46,7 @@ const SecReview = () => {
                                     <p className="date">施術日<span>{item.date}</span></p>
                                 </div>
                             </div>
+                            {item.beforeSrc && item.afterSrc && (
                             <div className="review-image">
                                 <div className="thumb">
                                     <img src={item.beforeSrc} alt="before review" />
@@ -58,6 +57,7 @@ const SecReview = () => {
                                     <span className="label">After</span>
                                 </div>
                             </div>
+                            )}
                             <div className="review-cont">
                                 <p className="title">{item.title}</p>
                                 <p className="summery">{item.summary}</p>

@@ -29,7 +29,7 @@ const PrototypeA: React.FC<PageProps> = ({pageCase}) => {
 			{/* // PageHeader */}
 
 			{/* PageBody */}
-			<PageBody template="template-a">
+			<PageBody pageName="template-b">
 				<section className='section'>
 					Page Body
 				</section>

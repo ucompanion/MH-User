@@ -266,3 +266,9 @@ $safe-area-bottom: (env(safe-area-inset-bottom, 0)/1.7);
 	margin: 0 calc(var(--padding-sidespacer) * -1);
 	padding: 0 var(--padding-sidespacer);
 }
+
+@mixin full-height {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+}

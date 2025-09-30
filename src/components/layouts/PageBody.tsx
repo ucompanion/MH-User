@@ -1,10 +1,10 @@
 interface BodyProps {
 	children: React.ReactNode;
-    template?: string;
+    pageName?: string;
 }
 
-const PageBody: React.FC<BodyProps> = ({ children, template }) => {
-    const className = `page-body ${template}`;
+const PageBody: React.FC<BodyProps> = ({ children, pageName }) => {
+    const className = `page-body ${pageName}`;
 	return (
 		<main className={className}>
 			<div className='page-content'>

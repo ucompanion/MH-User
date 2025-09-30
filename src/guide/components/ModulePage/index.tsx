@@ -22,7 +22,7 @@ const ModulePage = () => {
 			{/* // PageHeader */}
 
 			{/* PageBody */}
-			<PageBody template="template-a">
+			<PageBody pageName="template-b">
 				<TabPage />
 				<AccordionPage />
 				<PopoverPage />

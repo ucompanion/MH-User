@@ -1,17 +1,25 @@
-import { Icon } from '../../../components/ui';
+import { Checkbox, Radio, Icon } from '../../../components/ui';
 import { PageBody, PageFooter, PageHeader } from '../../../components/layouts';
 import { useState } from 'react';
 
 const FormPage = () => {
-	// Checkbox
-	const [checkbox1, setCheckbox1] = useState(false);
-	const [checkbox2, setCheckbox2] = useState(true);
-	const [checkbox3, setCheckbox3] = useState(false);
-	const [checkbox4, setCheckbox4] = useState(true);
-	// Radio
-	const [radio1, setRadio1] = useState('radio12');
-	const [radio2, setRadio2] = useState('radio22');
-	// Switch
+	// Checkbox/Radio Demo1
+	const [checkbox11, setCheckbox11] = useState(false);
+	const [checkbox12, setCheckbox12] = useState(true);
+	const [checkbox13, setCheckbox13] = useState(false);
+	const [checkbox14, setCheckbox14] = useState(true);
+	const [radio11, setRadio11] = useState('radio12');
+	const [radio12, setRadio12] = useState('radio22');
+
+	// Checkbox/Radio Demo2
+	const [checkbox21, setCheckbox21] = useState(false);
+	const [checkbox22, setCheckbox22] = useState(true);
+	const [checkbox23, setCheckbox23] = useState(false);
+	const [checkbox24, setCheckbox24] = useState(true);
+	const [radio21, setRadio21] = useState('radio12');
+	const [radio22, setRadio22] = useState('radio22');
+
+	// Switch Demo1
 	const [switch1, setSwitch1] = useState(false);
 	const [switch2, setSwitch2] = useState(true);
 	const [switch3, setSwitch3] = useState(false);
@@ -32,7 +40,7 @@ const FormPage = () => {
 			{/* // PageHeader */}
 
 			{/* PageBody */}
-			<PageBody template="template-a">
+			<PageBody pageName="template-b">
 				{/* Form Textfeild */}
 				<section className='section module-guide'>
 					<div className="section-header">
@@ -108,48 +116,177 @@ const FormPage = () => {
 				{/* Form Check */}
 				<section className='section module-guide'>
 					<div className="section-header">
-						<h2 className='section-h2'>Form Check</h2>
+						<h2 className='section-h2'>Form Check/Radio</h2>
 					</div>
 					<div className="section-body">
-						<h3 className="content-h3">.frm-checkbox-group</h3>
-						<div className='frm-checkbox-group'>
-							<label className='frm-checkbox demo-a'>
-								<input type="checkbox" name='demoCheckbox' className="checkbox" checked={checkbox1} onClick={()=>{setCheckbox1(!checkbox1)}}/>
-							</label>
-							<label className='frm-checkbox demo-a'>
-								<input type="checkbox" name='demoCheckbox' className="checkbox" checked={checkbox2} onClick={()=>{setCheckbox2(!checkbox2)}}/>
-								<span className='label'>Checkbox</span>
-							</label>
-							<label className='frm-checkbox demo-a'>
-								<input type="checkbox" name='demoCheckbox' className="checkbox" disabled checked={checkbox3} onClick={()=>{setCheckbox3(!checkbox3)}}/>
-								<span className='label'>Checkbox</span>
-							</label>
-							<label className='frm-checkbox demo-a'>
-								<input type="checkbox" name='demoCheckbox' className="checkbox" disabled checked={checkbox4} onClick={()=>{setCheckbox4(!checkbox4)}}/>
-								<span className='label'>Checkbox</span>
-							</label>
+						<h3 className="content-h3">demo-a</h3>
+						<div className='frm-checkbox-group demo-a'>
+							<Checkbox
+								name="demo1Checkbox"
+								module="demo-a"
+								checked={checkbox11}
+								disabled={false}
+								onClick={()=>{setCheckbox11(!checkbox11)}}
+							>
+								Checkbox
+							</Checkbox>
+							<Checkbox
+								name="demo1Checkbox"
+								module="demo-a"
+								checked={checkbox12}
+								disabled={false}
+								onClick={()=>{setCheckbox12(!checkbox12)}}
+							>
+								Checkbox
+							</Checkbox>
+							<Checkbox
+								name="demo1Checkbox"
+								module="demo-a"
+								checked={checkbox13}
+								disabled={true}
+								onClick={()=>{setCheckbox13(!checkbox13)}}
+							>
+								Checkbox
+							</Checkbox>
+							<Checkbox
+								name="demo1Checkbox"
+								module="demo-a"
+								checked={checkbox14}
+								disabled={true}
+								onClick={()=>{setCheckbox14(!checkbox14)}}
+							>
+								Checkbox
+							</Checkbox>
+						</div>
+						<br />
+						<div className='frm-radio-group demo-a'>
+							<Radio
+								name="demo1Radio1"
+								module="demo-a"
+								checked={radio11 === 'radio11'}
+								disabled={false}
+								onClick={()=>{setRadio11('radio11')}}
+							>
+								Radio
+							</Radio>
+							<Radio
+								name="demo1Radio1"
+								module="demo-a"
+								checked={radio11 === 'radio12'}
+								disabled={false}
+								onClick={()=>{setRadio11('radio12')}}
+							>
+								Radio
+							</Radio>
+							<Radio
+								name="demo1radio1"
+								module="demo-a"
+								checked={radio12 === 'radio11'}
+								disabled={true}
+								onClick={()=>{setRadio12('radio11')}}
+							>
+								Radio
+							</Radio>
+							<Radio
+								name="demo1radio1"
+								module="demo-a"
+								checked={radio12 === 'radio12'}
+								disabled={true}
+								onClick={()=>{setRadio12('radio12')}}
+							>
+								Radio
+							</Radio>
 						</div>
 
-						<h3 className="content-h3">.frm-radio-group</h3>
-						<div className='frm-radio-group'>
-							<label className='frm-radio demo-a'>
-								<input type="radio" name='demoRadio1' className="radio" checked={radio1 === 'radio11'} onClick={()=>{setRadio1('radio11')}} />
-							</label>
-							<label className='frm-radio demo-a'>
-								<input type="radio" name='demoRadio1' className="radio" checked={radio1 === 'radio12'} onClick={()=>{setRadio1('radio12')}} />
-								<span className='label'>Radio</span>
-							</label>
-							<label className='frm-radio demo-a'>
-								<input type="radio" name='demoRadio2' className="radio" disabled checked={radio2 === 'radio21'} onClick={()=>{setRadio2('radio21')}} />
-								<span className='label'>Radio</span>
-							</label>
-							<label className='frm-radio demo-a'>
-								<input type="radio" name='demoRadio2' className="radio" disabled checked={radio2 === 'radio22'} onClick={()=>{setRadio2('radio22')}} />
-								<span className='label'>Radio</span>
-							</label>
+						<h3 className="content-h3">demo-b</h3>
+						<div className='frm-checkbox-group demo-b'>
+							<Checkbox
+								name="demo2Checkbox"
+								module="demo-b"
+								checked={checkbox21}
+								disabled={false}
+								onClick={()=>{setCheckbox21(!checkbox21)}}
+							>
+								<strong className='label-tit'>Title</strong>
+								<span className='label-txt'>Summary</span>
+							</Checkbox>
+							<Checkbox
+								name="demo2Checkbox"
+								module="demo-b"
+								checked={checkbox22}
+								disabled={false}
+								onClick={()=>{setCheckbox22(!checkbox22)}}
+							>
+								Checkbox
+							</Checkbox>
+							<Checkbox
+								name="demo2Checkbox"
+								module="demo-b"
+								checked={checkbox23}
+								disabled={true}
+								onClick={()=>{setCheckbox23(!checkbox23)}}
+							>
+								Checkbox
+							</Checkbox>
+							<Checkbox
+								name="demo2Checkbox"
+								module="demo-b"
+								checked={checkbox24}
+								disabled={true}
+								onClick={()=>{setCheckbox24(!checkbox24)}}
+							>
+								Checkbox
+							</Checkbox>
 						</div>
+						<br />
+						<div className='frm-radio-group demo-b'>
+							<Radio
+								name="demo2Radio1"
+								module="demo-b"
+								checked={radio21 === 'radio11'}
+								disabled={false}
+								onClick={()=>{setRadio21('radio11')}}
+							>
+								Radio
+							</Radio>
+							<Radio
+								name="demo2Radio1"
+								module="demo-b"
+								checked={radio21 === 'radio12'}
+								disabled={false}
+								onClick={()=>{setRadio21('radio12')}}
+							>
+								Radio
+							</Radio>
+							<Radio
+								name="demo2Radio2"
+								module="demo-b"
+								checked={radio22 === 'radio21'}
+								disabled={true}
+								onClick={()=>{setRadio22('radio21')}}
+							>
+								Radio
+							</Radio>
+							<Radio
+								name="demo2Radio2"
+								module="demo-b"
+								checked={radio22 === 'radio22'}
+								disabled={true}
+								onClick={()=>{setRadio22('radio22')}}
+							>
+								Radio
+							</Radio>
+						</div>
+					</div>
+				</section>
+				{/* // Form Check */}
 
-						<h3 className="content-h3">Switch</h3>
+				{/* Form Switch */}
+				<section className='section module-guide'>
+					<div className="section-header">
+						<h2 className='section-h2'>Form Switch</h2>
+					</div>
+					<div className="section-body">
 						<div className='flex-nw gap-10'>
 							<label className='frm-switch demo-a'>
 								<input type="checkbox" name='demoSwitch1' checked={switch1} onClick={()=>{setSwitch1(!switch1)}} />
@@ -170,7 +307,7 @@ const FormPage = () => {
 						</div>
 					</div>
 				</section>
-				{/* // Form Check */}
+				{/* Form Switch */}
 			</PageBody>
 			{/* // PageBody */}
 

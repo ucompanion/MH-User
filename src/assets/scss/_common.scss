@@ -476,6 +476,10 @@ input::-webkit-calendar-picker-indicator {
 	-webkit-box-orient: vertical;
 }
 
+.full-height {
+	@include full-height;
+}
+
 /*-------------------------------------------------------------------
 	@@ Layout
 -------------------------------------------------------------------*/
@@ -697,9 +701,30 @@ input::-webkit-calendar-picker-indicator {
 				}
 			}
 		}
+
+		&-action {
+			position: sticky;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: calc(90rem + #{$safe-area-bottom});
+			background-color: #fff;
+			.btn-group {
+				display: flex;
+				gap: 10rem;
+				height: 100%;
+				@include outer;
+				padding-top: 20rem;
+				padding-bottom: calc(20rem + #{$safe-area-bottom});
+				.btn {
+					flex: 1 1 auto;
+					width: 100%;
+				}
+			}
+		}
 	}
 
-	// template-a
+	// template-a (main)
 	&.template-a {
 		.page-header {
 			--header-bgcolor: #000;
@@ -725,11 +750,22 @@ input::-webkit-calendar-picker-indicator {
 		}
 	}
 
-	// template-b
+	// template-b (sub)
 	&.template-b {
 		.page-header {
 			--header-bgcolor: #000;
 			--header-color: #fff;
+		}
+		.page-body {
+			padding-bottom: 40rem;
+		}
+	}
+
+	// template-c (sub - onboarding)
+	&.template-c {
+		.page-body {
+			padding-top: 100rem;
+			padding-bottom: 40rem;
 		}
 	}
 }

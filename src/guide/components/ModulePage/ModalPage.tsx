@@ -16,7 +16,7 @@ const ModalPage = () => {
             </div>
             <div className="section-body">
                 <h3 className="content-h3">Content Title</h3>
-                <button type="button" className='btn demo-a fill-primary' onClick={handleAlertShow}>
+                <button type="button" className='btn module-a fill-primary' onClick={handleAlertShow}>
                     Modal Alert
                 </button>
                 <Modal className='modal-alert' backdrop="static" show={AlertShow} onHide={handleAlertClose}>
@@ -32,12 +32,12 @@ const ModalPage = () => {
                     </Modal.Body>
 
                     <Modal.Footer>
-                        <button type='button' className='btn demo-a fill-normal' onClick={handleAlertClose}><span>Close</span></button>
-                        <button type='button' className='btn demo-a fill-primary' onClick={handleAlertClose}><span>Save</span></button>
+                        <button type='button' className='btn module-a fill-normal' onClick={handleAlertClose}><span>Close</span></button>
+                        <button type='button' className='btn module-a fill-primary' onClick={handleAlertClose}><span>Save</span></button>
                     </Modal.Footer>
                 </Modal>
 
-                <button type="button" className='btn demo-a fill-primary' onClick={handleBasicShow}>
+                <button type="button" className='btn module-a fill-primary' onClick={handleBasicShow}>
                     Modal Full
                 </button>
                 <Modal className='modal-full' show={BasicShow} onHide={handleBasicClose}>
@@ -54,8 +54,8 @@ const ModalPage = () => {
                     </Modal.Body>
 
                     <Modal.Footer>
-                        <button type='button' className='btn demo-a fill-normal' onClick={handleBasicClose}><span>Close</span></button>
-                        <button type='button' className='btn demo-a fill-primary' onClick={handleBasicClose}><span>Save</span></button>
+                        <button type='button' className='btn module-a fill-normal' onClick={handleBasicClose}><span>Close</span></button>
+                        <button type='button' className='btn module-a fill-primary' onClick={handleBasicClose}><span>Save</span></button>
                     </Modal.Footer>
                 </Modal>
             </div>

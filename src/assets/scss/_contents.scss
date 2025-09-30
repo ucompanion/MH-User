@@ -108,7 +108,7 @@
 .region-list {
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
-	gap: clamp(10rem,calc((100vw/393)*16) ,16rem);
+	gap: clamp(10rem,calc((100vw/393)*15) ,30rem);
 
 	.region-item {
 		display: flex;
@@ -189,39 +189,71 @@
 }
 
 // 병원카드
-.hospitel-scroll {
-	@include outer-scroll;
-}
-.hospitel-list {
-	display: flex;
-	gap: 10rem;
-	.hospitel-item {
-		flex: none;
-	}
-}
-.hospitel-card {
-	display: flex;
-	flex-direction: column;
-	gap: 15rem;
-	width: 160rem;
-	.hospitel-imge {
-		.thumb {
-			width: 100%;
-			height: 144rem;
-			border-radius: 10rem;
-			overflow: hidden;
-			img {
-				@include obj-cover;
+.hospitel {
+	// hospitel-scroll
+	&-scroll {
+		@include outer-scroll;
+		gap: 10rem;
+
+		.hospitel-card {
+			display: flex;
+			flex-direction: column;
+			gap: 15rem;
+			width: 160rem;
+			.hospitel-imge {
+				.thumb {
+					width: 100%;
+					height: 144rem;
+					border-radius: 10rem;
+					overflow: hidden;
+					img {
+						@include obj-cover;
+					}
+				}
+			}
+			.hospitel-cont {
+				.title {
+					@include font-set(600, 17, #000);
+				}
+				.city {
+					@include font-set(400, 14, #49515B);
+				}
 			}
 		}
 	}
-	.hospitel-cont {
-		.title {
-			@include font-set(600, 17, #000);
+
+	// hospitel-list
+	&-list {
+		.hospitel-item {
+			padding: 20rem 0;
+			border-bottom: 1px solid #ddd;
 		}
-		.city {
-			@include font-set(400, 14, #49515B);
+		.hospitel-card {
+			display: flex;
+			flex-direction: column;
+			gap: 15rem;
+			width: 100%;
+			.hospitel-imge {
+				.thumb {
+					width: 100%;
+					height: 144rem;
+					border-radius: 10rem;
+					overflow: hidden;
+					img {
+						@include obj-cover;
+					}
+				}
+			}
+			.hospitel-cont {
+				.title {
+					@include font-set(600, 17, #000);
+				}
+				.city {
+					@include font-set(400, 14, #49515B);
+				}
+			}
 		}
+
 	}
 }
 
@@ -230,40 +262,41 @@
 	display: flex;
 	flex-direction: column;
 	gap: 10rem;
-}
-.doctor-card {
-	display: flex;
-	align-items: center;
-	gap: 16rem;
-	.doctor-image {
-		.thumb {
-			display: flex;
-			align-items: flex-start;
-			justify-content: center;
-			width: 120rem;
-			height: 120rem;
-			overflow: hidden;
-			border-radius: 50%;
-			img {
-				width: 100%;
+
+	.doctor-card {
+		display: flex;
+		align-items: center;
+		gap: 16rem;
+		.doctor-image {
+			.thumb {
+				display: flex;
+				align-items: flex-start;
+				justify-content: center;
+				width: 120rem;
+				height: 120rem;
+				overflow: hidden;
+				border-radius: 50%;
+				img {
+					width: 100%;
+				}
 			}
 		}
-	}
-	.doctor-cont {
-		flex: 1 1 auto;
-		overflow: hidden;
-		.title {
-			@include font-set(600, 17, #000);
-		}
-		.agency {
-			margin-top: 10rem;
-			@include font-set(400, 17, #49515B);
-		}
-		.tags {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 6rem;
-			margin-top: 10rem;
+		.doctor-cont {
+			flex: 1 1 auto;
+			overflow: hidden;
+			.title {
+				@include font-set(600, 17, #000);
+			}
+			.agency {
+				margin-top: 10rem;
+				@include font-set(400, 17, #49515B);
+			}
+			.tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 6rem;
+				margin-top: 10rem;
+			}
 		}
 	}
 }
@@ -276,72 +309,103 @@
 	.review-item {
 		width: 100%;
 	}
-}
-.review-card {
-	.review-profile {
-		display: flex;
-		align-items: center;
-		gap: 12rem;
-		.avata {
-			flex: none;
-			width: 50rem;
-			height: 50rem;
-			border-radius: 50%;
-			overflow: hidden;
-			img {
-				@include obj-cover;
+	.review-card {
+		.review-profile {
+			display: flex;
+			align-items: center;
+			gap: 12rem;
+			.avata {
+				flex: none;
+				width: 50rem;
+				height: 50rem;
+				border-radius: 50%;
+				overflow: hidden;
+				img {
+					@include obj-cover;
+				}
+			}
+			.cont {
+				overflow: hidden;
+				flex: 1 1 auto;
+				.nicname {
+					@include font-set(500, 17, #000);
+				}
+				.date {
+					@include font-set(400, 15, #49515B);
+				}
 			}
 		}
-		.cont {
-			overflow: hidden;
-			flex: 1 1 auto;
-			.nicname {
+		.review-image {
+			--gap: 12rem;
+			display: flex;
+			gap: var(--gap);
+			margin-top: 20rem;
+			.thumb {
+				position: relative;
+				width: calc(100% - (var(--gap)/2));
+				aspect-ratio: 170/164;
+				overflow: hidden;
+				img {
+					@include obj-cover;
+				}
+				.label {
+					display: block;
+					position: absolute;
+					left: 12rem;
+					top: 7rem;
+					padding: 0 8rem;
+					@include font-set(400, 15, #fff);
+					border-radius: 20rem;
+					background-color: rgba(0, 0, 0, 0.5);
+				}
+			}
+		}
+		.review-cont {
+			margin-top: 20rem;
+			.title {
 				@include font-set(500, 17, #000);
+				@include ellipsis1;
 			}
-			.date {
-				@include font-set(400, 15, #49515B);
+			.summary {
+				margin-top: 4rem;
+				@include font-set(400, 17, #49515B);
+				@include ellipsis2;
 			}
-		}
-	}
-	.review-image {
-		--gap: 12rem;
-		display: flex;
-		gap: var(--gap);
-		margin-top: 20rem;
-		.thumb {
-			position: relative;
-			width: calc(100% - (var(--gap)/2));
-			aspect-ratio: 170/164;
-			overflow: hidden;
-			img {
-				@include obj-cover;
-			}
-			.label {
-				display: block;
-				position: absolute;
-				left: 12rem;
-				top: 7rem;
-				padding: 0 8rem;
-				@include font-set(400, 15, #fff);
-				border-radius: 20rem;
-				background-color: rgba(0, 0, 0, 0.5);
-			}
-		}
-	}
-	.review-cont {
-		margin-top: 20rem;
-		.title {
-			@include font-set(500, 17, #000);
-			@include ellipsis1;
-		}
-		.summary {
-			margin-top: 4rem;
-			@include font-set(400, 17, #49515B);
-			@include ellipsis2;
 		}
 	}
 }
 
+/*-------------------------------------------------------------------
+	@@ 온보딩
+-------------------------------------------------------------------*/
+// Section2: 고민중인 부위선택
+.region-choice-list {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: clamp(10rem,calc((100vw/393)*15) ,30rem);
+
+	.region-item {
+		display: flex;
+	}
+
+	.frm-checkbox {
+		position: relative;
+		.checkbox {
+			position: absolute;
+			left: 0;
+			top: 0;
+			--size: 22rem;
+			width: var(--size);
+			height: var(--size);
+		}
+		.label {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+		}
+	}
+}
 
 /*-------------------------------------------------------------------
 	@@ 팝업명

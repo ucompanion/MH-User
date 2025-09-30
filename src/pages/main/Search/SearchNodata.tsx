@@ -1,14 +1,12 @@
-import { Icon, SearchForm } from '../../../components/ui';
+import { Icon, Nodata, SearchForm } from '../../../components/ui';
 import { PageBody, PageHeader } from '../../../components/layouts';
-import SecPopular from './sections/SecPopular';
-import SecRegion from './sections/SecRegion';
 
 interface PageProps {
     menu?: string;
 	// pageCase?: string; // case prop이 있을 수도, 없을 수도 있음
 }
 
-const Search: React.FC<PageProps> = (props) => {
+const SearchNodata: React.FC<PageProps> = (props) => {
 	return (
 		<div className='page template-b'>
 			{/* PageHeader */}
@@ -18,21 +16,21 @@ const Search: React.FC<PageProps> = (props) => {
 						<Icon name='icn-back'/>
 						<span className="blind">뒤로가기</span>
 					</button>
-					<SearchForm val="" />
+					<SearchForm val="코" />
 				</div>
 			</PageHeader>
 			{/* // PageHeader */}
 
 			{/* PageBody */}
 			<PageBody pageName="search-wrap">
-				{/* Section: 인기검색어 */}
-				<SecPopular />
-
-				{/* Section: 고민분위 */}
-				<SecRegion />
+				<Nodata
+					name='module-a'
+					title='검색결과가 없습니다.'
+					summary='고민 부위와 후기를 검색해 보세요.'
+				 />
 			</PageBody>
 			{/* // PageBody */}
 		</div>
 	)
 }
-export default Search;
+export default SearchNodata;

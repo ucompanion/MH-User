@@ -17,7 +17,7 @@ const ElementPage = () => {
 			{/* // PageHeader */}
 
 			{/* PageBody */}
-			<PageBody template="template-a">
+			<PageBody pageName="template-b">
 				{/* Buttons */}
 				<section className='section module-guide'>
 					<div className="section-header">
@@ -66,16 +66,16 @@ const ElementPage = () => {
 						</button>
 
 						<h3 className="content-h3">module-a (Action Button)</h3>
-						<button type='button' className='btn demo-a fill-normal'>
+						<button type='button' className='btn module-a fill-normal'>
 							<span>module-a</span>
 						</button>
-						<button type='button' className='btn demo-a fill-primary'>
+						<button type='button' className='btn module-a fill-primary'>
 							<span>module-a</span>
 						</button>
-						<button type='button' className='btn demo-a fill-secondary'>
+						<button type='button' className='btn module-a fill-secondary'>
 							<span>module-a</span>
 						</button>
-						<button type='button' className='btn demo-a fill-dark'>
+						<button type='button' className='btn module-a fill-dark'>
 							<span>module-a</span>
 						</button>
 

@@ -1,17 +1,4 @@
-import ScrollContainer from "react-indiana-drag-scroll";
-import 'react-indiana-drag-scroll/dist/style.css';
-import { Icon } from "../../../components/ui";
-
-const productKeywordData = [
-    { id: 'item1', text: '脂肪吸引' },
-    { id: 'item2', text: '脂肪移植' },
-    { id: 'item3', text: '小顔注射' },
-    { id: 'item4', text: '目の修正手術' },
-    { id: 'item5', text: '脂肪吸引' },
-    { id: 'item6', text: '脂肪移植' },
-    { id: 'item7', text: '小顔注射' },
-    { id: 'item8', text: '目の修正手術' },
-];
+import { Icon } from "../../../../components/ui";
 
 const productItemsData = [
     {
@@ -43,25 +30,13 @@ const productItemsData = [
 const SecProduct = () => {
     return (
         <section className='section module-a'>
-            <div className="section-header mar-b10">
+            <div className="section-header">
                 <h2 className="section-h2">部位別 <em>人気の商品</em>は何ですか？</h2>
                 <button type='button' className='btn btn-more'>
                     <Icon name='icn-more' />
                 </button>
             </div>
             <div className="section-body">
-                <ScrollContainer className="mediCate-scroll">
-                    <ul className='mediCate-list'>
-                        {productKeywordData.map((item) => (
-                            <li key={item.id}>
-                                <button type='button' className='btn mediCate-tab'>
-                                    <span>{item.text}</span>
-                                </button>
-                            </li>
-                        ))}
-                    </ul>
-                </ScrollContainer>
-
                 <ul className="product-list">
                     {productItemsData.map((item) => (
                         <li className='product-item' key={item.id}>

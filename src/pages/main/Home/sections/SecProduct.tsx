@@ -1,6 +1,6 @@
 import ScrollContainer from "react-indiana-drag-scroll";
 import 'react-indiana-drag-scroll/dist/style.css';
-import { Icon } from "../../../components/ui";
+import { Icon } from "../../../../components/ui";
 
 const productKeywordData = [
     { id: 'item1', text: '脂肪吸引' },

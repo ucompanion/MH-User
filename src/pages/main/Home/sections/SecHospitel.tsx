@@ -1,6 +1,6 @@
 import ScrollContainer from "react-indiana-drag-scroll";
 import 'react-indiana-drag-scroll/dist/style.css';
-import { Icon } from '../../../components/ui';
+import { Icon } from '../../../../components/ui';
 import { useState } from "react";
 
 const hospitelKeywordData = [
@@ -67,23 +67,19 @@ const SecHospitel = () => {
                     </ul>
                 </ScrollContainer>
                 <ScrollContainer className="hospitel-scroll">
-                    <ul className='hospitel-list'>
                     {hospitelSlides.map((slide) => (
-                        <li className="hospitel-item" key={slide.id}>
-                            <div className="hospitel-card" role="link">
-                                <div className="hospitel-imge">
-                                    <div className="thumb">
-                                        <img src={slide.imageSrc} alt={slide.title} />
-                                    </div>
-                                </div>
-                                <div className="hospitel-cont">
-                                    <p className="title">{slide.title}</p>
-                                    <p className="city">{slide.city}</p>
+                        <div className="hospitel-card" role="link" key={slide.id}>
+                            <div className="hospitel-imge">
+                                <div className="thumb">
+                                    <img src={slide.imageSrc} alt={slide.title} />
                                 </div>
                             </div>
-                        </li>
+                            <div className="hospitel-cont">
+                                <p className="title">{slide.title}</p>
+                                <p className="city">{slide.city}</p>
+                            </div>
+                        </div>
                     ))}
-                    </ul>
                 </ScrollContainer>
             </div>
         </section>
