@@ -240,6 +240,19 @@ input::-webkit-calendar-picker-indicator {
 	}
 }
 
+/* Overflow */
+.scroll-a {
+	overflow: auto;
+}
+
+.scroll-h {
+	overflow: hidden;
+}
+
+.scroll-v {
+	overflow: visible;
+}
+
 /* Margin */
 .mar-0 {
 	margin: 0 !important;
@@ -640,6 +653,7 @@ input::-webkit-calendar-picker-indicator {
 			}
 		}
 
+		// page-navigation
 		&-navigation {
 			position: sticky;
 			left: 0;
@@ -702,20 +716,22 @@ input::-webkit-calendar-picker-indicator {
 			}
 		}
 
+		// page-action
 		&-action {
+			--padding: 20rem;
 			position: sticky;
 			left: 0;
 			bottom: 0;
 			width: 100%;
-			height: calc(90rem + #{$safe-area-bottom});
 			background-color: #fff;
+			padding-bottom: $safe-area-bottom;
+			@include outer;
+
 			.btn-group {
 				display: flex;
 				gap: 10rem;
-				height: 100%;
-				@include outer;
-				padding-top: 20rem;
-				padding-bottom: calc(20rem + #{$safe-area-bottom});
+				padding-top: var(--padding);
+				padding-bottom: var(--padding);
 				.btn {
 					flex: 1 1 auto;
 					width: 100%;

@@ -1,4 +1,4 @@
-import { PageAction, PageBody } from '../../../components/layouts';
+import { PageBody } from '../../../components/layouts';
 import SecStepA from './sections/SecStepA';
 
 const StepA = () => {
@@ -10,14 +10,16 @@ const StepA = () => {
 			</PageBody>
 			{/* // PageBody */}
 
-			<PageAction>
-				<button type='button' className='btn module-a line-normal'>
-					<span>이전</span>
-				</button>
-				<button type='button' className='btn module-a fill-primary'>
-					<span>다음</span>
-				</button>
-			</PageAction>
+			<div className='page-action'>
+				<div className="btn-group">
+					<button type='button' className='btn module-a line-normal'>
+						<span>이전</span>
+					</button>
+					<button type='button' className='btn module-a fill-primary' disabled={true}>
+						<span>다음</span>
+					</button>
+				</div>
+			</div>
 		</div>
 	)
 }

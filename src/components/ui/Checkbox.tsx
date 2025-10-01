@@ -6,11 +6,12 @@ interface CheckboxProps {
     value?: string,
     checked: boolean,
     disabled: boolean,
-    onClick: () => void;
+    onClick?: () => void;
+    onChange?: () => void;
     children?: ReactNode;
 }
 
-const Checkbox: React.FC<CheckboxProps> = ({ module, name, value, checked, disabled, onClick, children }) => {
+const Checkbox: React.FC<CheckboxProps> = ({ module, name, value, checked, disabled, onClick, onChange, children }) => {
     const className = `frm-checkbox ${module}`;
     return (
         <label className={className}>
@@ -22,6 +23,7 @@ const Checkbox: React.FC<CheckboxProps> = ({ module, name, value, checked, disab
                 checked={checked}
                 disabled={disabled}
                 onClick={onClick}
+                onChange={onChange}
             />
             <span className="label">{ children }</span>
         </label>

@@ -39,12 +39,12 @@ const SecStepA = () => {
                     {regionItemsData.map((item) => (
                         <li className='region-item' key={item.id}>
                             <Checkbox
-                                name="selectedRegions"
+                                name="regionChk"
                                 module="region"
                                 value={item.id}
                                 checked={regiongChk[item.id] || false}
                                 disabled={false}
-                                onClick={() => handleCheckboxClick(item.id)}
+                                onChange={() => handleCheckboxClick(item.id)}
                             >
                                 <span className="label-img">
                                     <img src={"/MH-User/images/contents/" + item.filename} alt="" />

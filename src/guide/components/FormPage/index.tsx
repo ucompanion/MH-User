@@ -19,6 +19,14 @@ const FormPage = () => {
 	const [radio21, setRadio21] = useState('radio12');
 	const [radio22, setRadio22] = useState('radio22');
 
+	// Checkbox/Radio Demo3
+	const [checkbox31, setCheckbox31] = useState(false);
+	const [checkbox32, setCheckbox32] = useState(true);
+	const [checkbox33, setCheckbox33] = useState(false);
+	const [checkbox34, setCheckbox34] = useState(true);
+	const [radio31, setRadio31] = useState('radio12');
+	const [radio32, setRadio32] = useState('radio32');
+
 	// Switch Demo1
 	const [switch1, setSwitch1] = useState(false);
 	const [switch2, setSwitch2] = useState(true);
@@ -112,6 +120,8 @@ const FormPage = () => {
 					</div>
 				</section>
 				{/* // Form Textfeild */}
+
+				<hr className="divider module-a" />
 
 				{/* Form Check */}
 				<section className='section module-guide'>
@@ -277,9 +287,90 @@ const FormPage = () => {
 								Radio
 							</Radio>
 						</div>
+
+						<h3 className="content-h3">demo-c</h3>
+						<div className='frm-checkbox-group demo-c'>
+							<Checkbox
+								name="demo3Checkbox"
+								module="demo-c"
+								checked={checkbox31}
+								disabled={false}
+								onClick={()=>{setCheckbox31(!checkbox31)}}
+							>
+								Checkbox
+							</Checkbox>
+							<Checkbox
+								name="demo3Checkbox"
+								module="demo-c"
+								checked={checkbox32}
+								disabled={false}
+								onClick={()=>{setCheckbox32(!checkbox32)}}
+							>
+								Checkbox
+							</Checkbox>
+							<Checkbox
+								name="demo3Checkbox"
+								module="demo-c"
+								checked={checkbox33}
+								disabled={true}
+								onClick={()=>{setCheckbox33(!checkbox33)}}
+							>
+								Checkbox
+							</Checkbox>
+							<Checkbox
+								name="demo3Checkbox"
+								module="demo-c"
+								checked={checkbox34}
+								disabled={true}
+								onClick={()=>{setCheckbox34(!checkbox34)}}
+							>
+								Checkbox
+							</Checkbox>
+						</div>
+						<br />
+						<div className='frm-radio-group demo-c'>
+							<Radio
+								name="demo3Radio1"
+								module="demo-c"
+								checked={radio31 === 'radio11'}
+								disabled={false}
+								onClick={()=>{setRadio31('radio11')}}
+							>
+								Radio
+							</Radio>
+							<Radio
+								name="demo3Radio1"
+								module="demo-c"
+								checked={radio31 === 'radio12'}
+								disabled={false}
+								onClick={()=>{setRadio31('radio12')}}
+							>
+								Radio
+							</Radio>
+							<Radio
+								name="demo3Radio3"
+								module="demo-c"
+								checked={radio32 === 'radio31'}
+								disabled={true}
+								onClick={()=>{setRadio32('radio31')}}
+							>
+								Radio
+							</Radio>
+							<Radio
+								name="demo3Radio3"
+								module="demo-c"
+								checked={radio32 === 'radio32'}
+								disabled={true}
+								onClick={()=>{setRadio32('radio32')}}
+							>
+								Radio
+							</Radio>
+						</div>
 					</div>
 				</section>
 				{/* // Form Check */}
+
+				<hr className="divider module-a" />
 
 				{/* Form Switch */}
 				<section className='section module-guide'>

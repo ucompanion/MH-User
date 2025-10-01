@@ -124,6 +124,8 @@ const ElementPage = () => {
 				</section>
 				{/* // Buttons */}
 
+				<hr className="divider module-a" />
+
 				{/* Labels */}
 				<section className='section module-guide'>
 					<div className="section-header">
@@ -166,6 +168,8 @@ const ElementPage = () => {
 					</div>
 				</section>
 				{/* // Labels */}
+
+				<hr className="divider module-a" />
 
 				{/* Dividers */}
 				<section className='section module-guide'>

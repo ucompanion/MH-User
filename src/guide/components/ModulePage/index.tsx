@@ -1,10 +1,10 @@
 import { Icon } from '../../../components/ui';
 import { PageBody, PageFooter, PageHeader } from '../../../components/layouts';
-import TabPage from './TabPage';
-import AccordionPage from './AccordionPage';
-import PopoverPage from './PopoverPage';
-import ModalPage from './ModalPage';
-import SwiperPage from './SwiperPage';
+import TabPage from './sections/TabPage';
+import AccordionPage from './sections/AccordionPage';
+import PopoverPage from './sections/PopoverPage';
+import ModalPage from './sections/ModalPage';
+import SwiperPage from './sections/SwiperPage';
 
 const ModulePage = () => {
 	return (
@@ -24,9 +24,13 @@ const ModulePage = () => {
 			{/* PageBody */}
 			<PageBody pageName="template-b">
 				<TabPage />
+				<hr className="divider module-a" />
 				<AccordionPage />
+				<hr className="divider module-a" />
 				<PopoverPage />
+				<hr className="divider module-a" />
 				<ModalPage />
+				<hr className="divider module-a" />
 				<SwiperPage />
 			</PageBody>
 			{/* // PageBody */}

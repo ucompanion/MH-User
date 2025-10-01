@@ -378,7 +378,7 @@
 /*-------------------------------------------------------------------
 	@@ 온보딩
 -------------------------------------------------------------------*/
-// Section2: 고민중인 부위선택
+// Step2: 고민중인 부위선택
 .region-choice-list {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -406,6 +406,61 @@
 		}
 	}
 }
+
+// Step3: 관심있는 시술선택
+.medical-checklist {
+	padding: 20rem 0;
+	.category-title {
+		@include font-set(700,16, #000);
+	}
+
+	.dep2-chk,
+	.dep3-chk {
+		display: flex;
+		align-items: center;
+		height: 48rem;
+	}
+	.dep3-list {
+		padding-left: 20rem;
+	}
+
+	// 선택결과
+	&-result {
+		padding-top: var(--padding);
+
+		.total {
+			display: flex;
+			align-items: center;
+			position: relative;
+			height: 40rem;
+			@include font-set(700, 16, #000);
+			em {
+				color: var(--color-primary);
+			}
+
+			.btn {
+				--size: 40rem;
+				position: absolute;
+				right: 0;
+				top: calc(50% - (var(--size)/2));
+				width: var(--size);
+				height: var(--size);
+				&::before {
+					content:'';
+					display: block;
+					width: 16rem;
+					height: 16rem;
+					@include bg-default;
+					background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.6263 9.84101C1.80976 10.0365 2.1258 10.0542 2.33219 9.88035L8.00001 5.10745L13.6678 9.88035C13.8742 10.0541 14.1903 10.0365 14.3737 9.84101C14.5572 9.64548 14.5386 9.34608 14.3322 9.17227L8.33219 4.11965C8.14274 3.96012 7.85727 3.96012 7.66782 4.11965L1.66782 9.17228C1.46143 9.34608 1.44284 9.64548 1.6263 9.84101Z' fill='%23A4A6AA'/%3E%3C/svg%3E%0A");
+				}
+				&[aria-expanded='true']::before {
+					transform: scaleY(-1);
+				}
+			}
+		}
+	}
+}
+
 
 /*-------------------------------------------------------------------
 	@@ 팝업명
