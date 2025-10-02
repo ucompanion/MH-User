@@ -28,6 +28,7 @@ html,body,div,ul,ol,dl,li,dt,dd,p,h1,h2,h3,h4,h5,h6,table,thead,tbody,tr,th,td,c
 	-o-box-sizing: inherit;
 	-webkit-print-color-adjust: exact;
 	print-color-adjust: exact !important;
+	letter-spacing: -0.02em;
 }
 
 :before,
@@ -296,6 +297,10 @@ input::-webkit-calendar-picker-indicator {
 
 .pad-l0 {
 	padding-left: 0 !important
+}
+
+.pad-r70 {
+	padding-right: 70rem !important;
 }
 
 /* Flex */
@@ -660,12 +665,6 @@ input::-webkit-calendar-picker-indicator {
 
 		// page-body
 		&-body {
-			position: sticky;
-			left: 0;
-			bottom: 0;
-			margin-top: auto;
-			padding-bottom: $safe-area-bottom;
-
 			.page-content {
 				--content-top: 0rem;
 				--content-bottom: 40rem;
@@ -693,20 +692,19 @@ input::-webkit-calendar-picker-indicator {
 				}
 
 				.page-action {
-					--padding: 20rem;
 					@include outer;
 					background-color: #fff;
 					margin-top: 0;
-					padding-top: var(--padding);
-					padding-bottom: calc(var(--padding) + #{$safe-area-bottom});
 				}
 			}
 
 			.page-action {
+				--padding: 20rem;
 				display: flex;
 				flex-direction: column;
-				margin-top: var(--content-bottom);
-				padding-bottom: $safe-area-bottom;
+				margin-top: calc(var(--content-bottom) - var(--padding));
+				padding-top: var(--padding);
+				padding-bottom: calc(var(--padding) + #{$safe-area-bottom});
 
 				.btn {
 					&.module-a {

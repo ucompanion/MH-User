@@ -26,42 +26,42 @@ const ElementPage = () => {
 					</div>
 					<div className="section-body">
 						<h3 className="content-h3">[Options]</h3>
-						<button type='button' className='btn demo-c fill-normal'>
+						<button type='button' className='btn module-c fill-normal'>
 							<span>fill-normal</span>
 						</button>
-						<button type='button' className='btn demo-c fill-primary'>
+						<button type='button' className='btn module-c fill-primary'>
 							<span>fill-primary</span>
 						</button>
-						<button type='button' className='btn demo-c fill-secondary'>
+						<button type='button' className='btn module-c fill-secondary'>
 							<span>fill-secondary</span>
 						</button>
-						<button type='button' className='btn demo-c fill-dark'>
+						<button type='button' className='btn module-c fill-dark'>
 							<span>fill-dark</span>
 						</button>
 						<br /><br />
-						<button type='button' className='btn demo-c line-normal'>
+						<button type='button' className='btn module-c line-normal'>
 							<span>line-normal</span>
 						</button>
-						<button type='button' className='btn demo-c line-primary'>
+						<button type='button' className='btn module-c line-primary'>
 							<span>line-primary</span>
 						</button>
-						<button type='button' className='btn demo-c line-secondary'>
+						<button type='button' className='btn module-c line-secondary'>
 							<span>line-secondary</span>
 						</button>
-						<button type='button' className='btn demo-c line-dark'>
+						<button type='button' className='btn module-c line-dark'>
 							<span>line-dark</span>
 						</button>
 						<br /><br />
-						<button type='button' className='btn demo-c none-normal'>
+						<button type='button' className='btn module-c none-normal'>
 							<span>none-normal</span>
 						</button>
-						<button type='button' className='btn demo-c none-primary'>
+						<button type='button' className='btn module-c none-primary'>
 							<span>none-primary</span>
 						</button>
-						<button type='button' className='btn demo-c none-secondary'>
+						<button type='button' className='btn module-c none-secondary'>
 							<span>none-secondary</span>
 						</button>
-						<button type='button' className='btn demo-c none-dark'>
+						<button type='button' className='btn module-c none-dark'>
 							<span>none-dark</span>
 						</button>
 
@@ -80,30 +80,30 @@ const ElementPage = () => {
 						</button>
 
 						<h3 className="content-h3">module-b (Form Button)</h3>
-						<button type='button' className='btn demo-b fill-normal'>
+						<button type='button' className='btn module-b fill-normal'>
 							<span>module-b</span>
 						</button>
-						<button type='button' className='btn demo-b fill-primary'>
+						<button type='button' className='btn module-b fill-primary'>
 							<span>module-b</span>
 						</button>
-						<button type='button' className='btn demo-b fill-secondary'>
+						<button type='button' className='btn module-b fill-secondary'>
 							<span>module-b</span>
 						</button>
-						<button type='button' className='btn demo-b fill-dark'>
+						<button type='button' className='btn module-b fill-dark'>
 							<span>module-b</span>
 						</button>
 
 						<h3 className="content-h3">module-d (Module Button)</h3>
-						<button type='button' className='btn demo-c fill-normal'>
+						<button type='button' className='btn module-c fill-normal'>
 							<span>module-c</span>
 						</button>
-						<button type='button' className='btn demo-c fill-primary'>
+						<button type='button' className='btn module-c fill-primary'>
 							<span>module-c</span>
 						</button>
-						<button type='button' className='btn demo-c fill-secondary'>
+						<button type='button' className='btn module-c fill-secondary'>
 							<span>module-c</span>
 						</button>
-						<button type='button' className='btn demo-c fill-dark'>
+						<button type='button' className='btn module-c fill-dark'>
 							<span>module-c</span>
 						</button>
 

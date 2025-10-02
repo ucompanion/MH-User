@@ -13,7 +13,7 @@ const PrototypeA: React.FC<PageProps> = ({pageCase}) => {
 			<PageHeader>
 				<div className='top-area'>
 					<div className="title-area">
-						<div className="site-logo"><span className="blind">디엠성형외과</span></div>
+						<div className="site-logo"><span className="blind">ippeo</span></div>
 					</div>
 					<div className='util-area'>
 						<button type='button' className='btn btn-user'>

@@ -17,18 +17,18 @@ const SecSigin = () => {
 							<label htmlFor="frmName" className="frm-label">이름</label>
 						</div>
 						<div className="frm-content">
-							<div className="frm-input demo-a">
-								<input type="text" className="input" placeholder="이메일을 입력해주세요." />
+							<div className="frm-input module-a">
+								<input type="text" className="input" id="frmName" placeholder="이메일을 입력해주세요." />
 							</div>
 						</div>
 					</div>
 					<div className="frm-field">
 						<div className="frm-tit">
-							<label htmlFor="frmName" className="frm-label">비밀번호</label>
+							<label htmlFor="frmPw" className="frm-label">비밀번호</label>
 						</div>
 						<div className="frm-content">
-							<div className="frm-input demo-a">
-								<input type="text" className="input" placeholder="비밀번호를 입력해주세요." />
+							<div className="frm-input module-a">
+								<input type="password" className="input" id="frmPw" placeholder="비밀번호를 입력해주세요." />
 							</div>
 						</div>
 					</div>
@@ -46,7 +46,7 @@ const SecSigin = () => {
 					</div>
 				</form>
 				<div className="page-action">
-					<button type='button' className='btn module-a fill-primary'>
+					<button type='button' className='btn module-a fill-primary' disabled={true}>
 						<span>로그인</span>
 					</button>
 

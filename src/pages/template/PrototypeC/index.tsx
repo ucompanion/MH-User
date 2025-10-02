@@ -5,7 +5,7 @@ const Sigin = () => {
 	return (
 		<div className='page template-c'>
 			{/* PageBody */}
-			<PageBody menuClass="member-wrap">
+			<PageBody menuClass="member-wrap" optionClass='has-page-action'>
 				<Sec />
 			</PageBody>
 			{/* // PageBody */}

@@ -7,13 +7,13 @@ export const Sigin = () => {
 			{/* PageHeader */}
 			<PageHeader>
 				<div className="title-area">
-					<div className="site-logo"><span className="blind">디엠성형외과</span></div>
+					<div className="site-logo"><span className="blind">ippeo</span></div>
 				</div>
 			</PageHeader>
 			{/* // PageHeader */}
 
 			{/* PageBody */}
-			<PageBody menuClass="member-wrap">
+			<PageBody menuClass="member-wrap" optionClass='has-page-action'>
 				<h1 className="blind">로그인, 회원가입</h1>
 
 				{/* 섹션: 로그인 */}

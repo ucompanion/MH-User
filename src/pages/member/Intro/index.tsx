@@ -7,13 +7,13 @@ const Intro = () => {
 			{/* PageHeader */}
 			<PageHeader>
 				<div className="title-area">
-					<div className="site-logo"><span className="blind">디엠성형외과</span></div>
+					<div className="site-logo"><span className="blind">ippeo</span></div>
 				</div>
 			</PageHeader>
 			{/* // PageHeader */}
 
 			{/* PageBody */}
-			<PageBody menuClass="member-wrap" pageClass='intro-page' optionClass='has-page-action'>
+			<PageBody menuClass="member-wrap" optionClass='has-page-action'>
 				<h1 className="blind">로그인, 회원가입</h1>
 
 				{/* 섹션: 인트로 */}

@@ -46,15 +46,15 @@
 	}
 
 	// demo-b (Form Demo)
-	&.demo-b {
-		height: 40rem;
+	&.module-b {
+		height: 48rem;
 		padding: 5px 16rem;
 		border-radius: 4rem;
 		@include font-set(700, 16, #333);
 	}
 
 	// demo-c (Module Demo)
-	&.demo-c {
+	&.module-c {
 		height: 36rem;
 		padding: 4px 12rem;
 		border-radius: 36rem;
@@ -141,6 +141,7 @@
 -------------------------------------------------------------------*/
 .frm-input {
 	// Default
+	position: relative;
 	.input, .select, .textarea {
 		width: 100%;
 		height: var(--frm-height);
@@ -173,8 +174,8 @@
 		}
 	}
 
-	// demo-a
-	&.demo-a {
+	// module-a
+	&.module-a {
 		// Var: Default
 		--frm-height: 48rem;
 		--frm-color-placeholder: #999;
@@ -211,6 +212,22 @@
 			.count {
 				font-weight: 500;
 				color: #333;
+			}
+		}
+
+		.on-right {
+			position: absolute;
+			right: 0;
+			top: 0;
+			height: calc(var(--frm-height) - 2px);
+			display: flex;
+			align-items: center;
+			.text {
+				display: flex;
+				align-items: center;
+				height: 100%;
+				padding: 0 15rem;
+				@include font-set(400, 14, #ABABAB);
 			}
 		}
 	}
@@ -533,9 +550,36 @@
 	color: #666;
 }
 
+.frm-desc {
+	margin-top: 8rem;
+	p {
+		position: relative;
+		padding-left: 12rem;
+		@include font-set(400, 14, #ABABAB);
+		&::before {
+			content:'';
+			display: block;
+			position: absolute;
+			left: 2rem;
+			top: 8rem;
+			width: 3rem;
+			height: 3rem;
+			border-radius: 50%;
+			background-color: #ABABAB;
+		}
+	}
+}
+
 /*-------------------------------------------------------------------
 	@@ Forms Group
 -------------------------------------------------------------------*/
+.frm-controls {
+	display: flex;
+	gap: 8rem;
+	+ .frm-controls {
+		margin-top: 8rem;
+	}
+}
 .frm-input-group {
 	display: flex;
 	align-items: center;
