@@ -1,5 +1,8 @@
 import { HashRouter, Routes, Route } from 'react-router-dom';
 
+// System
+import NotFound from "./NotFound";
+
 // Layout
 import PageLayout from './components/layouts/PageLayout';
 
@@ -31,8 +34,13 @@ import OnboardingStep3B from "./pages/onboarding/Step3/StepB";
 import OnboardingStep4A from "./pages/onboarding/Step4/StepA";
 import OnboardingStep4B from "./pages/onboarding/Step4/StepB";
 
-// System
-import NotFound from "./NotFound";
+// Members
+import Intro from './pages/member/Intro';
+import Sigin from './pages/member/Sigin';
+import Agreement from './pages/member/Agreement';
+import Sigup from './pages/member/Sigup';
+import PasswordFind from './pages/member/PasswordFind';
+import PasswordReset from './pages/member/PasswordReset';
 
 const Router = () => {
 	return (
@@ -69,6 +77,14 @@ const Router = () => {
 					<Route path='onboarding/step3B' index element={<OnboardingStep3B />} />
 					<Route path='onboarding/step4A' index element={<OnboardingStep4A />} />
 					<Route path='onboarding/step4B' index element={<OnboardingStep4B />} />
+
+					{/* Member */}
+					<Route path='member/intro' index element={<Intro />} />
+					<Route path='member/sigin' index element={<Sigin />} />
+					<Route path='member/agreement' index element={<Agreement />} />
+					<Route path='member/sigup' index element={<Sigup />} />
+					<Route path='member/passwordFind' index element={<PasswordFind />} />
+					<Route path='member/passwordReset' index element={<PasswordReset />} />
 
 					{/* Category */}
 				</Route>

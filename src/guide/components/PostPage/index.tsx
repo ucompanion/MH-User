@@ -17,7 +17,7 @@ const PostPage = () => {
 			{/* // PageHeader */}
 
 			{/* PageBody */}
-			<PageBody pageName="template-b">
+			<PageBody menuClass="template-b">
 				{/* 상품 */}
 				<section className='section module-guide'>
 					<div className="section-header">

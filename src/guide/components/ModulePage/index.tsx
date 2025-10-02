@@ -22,7 +22,7 @@ const ModulePage = () => {
 			{/* // PageHeader */}
 
 			{/* PageBody */}
-			<PageBody pageName="template-b">
+			<PageBody menuClass="template-b">
 				<TabPage />
 				<hr className="divider module-a" />
 				<AccordionPage />

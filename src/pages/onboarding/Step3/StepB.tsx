@@ -35,52 +35,54 @@ const StepA = () => {
 	return (
 		<div className='page template-c'>
 			{/* PageBody */}
-			<PageBody pageName="onboarding-wrap">
+			<PageBody menuClass="onboarding-wrap" optionClass="has-sticky-btm">
+				{/* Section: 관심있는 시술 선택 */}
 				<SecStepB
 					onSelectedItemsChange={handleSelectedItemsUpdate}
 					pageActionHeight={pageActionHeight}
 				/>
+
+				<div className='page-action' ref={pageActionRef}>
+					<div className='medical-checklist-result'>
+						<div className="total">
+							<em>{selectedChecklist.length}</em>&nbsp;개 선택
+							<button type='button' className='btn'
+								onClick={() => setOpen(!open)}
+								aria-controls="medicalChecklistCollapse"
+								aria-expanded={open}
+							>
+								<span className='blind'>토글</span>
+							</button>
+						</div>
+						<Collapse in={open}
+							onEntered={updatePageActionHeight} // 펼치는 애니메이션 끝난 후 실행
+							onExited={updatePageActionHeight}  // 접는 애니메이션이 끝난 후 실행
+						>
+							<div id="medicalChecklistCollapse">
+								{selectedChecklist.length > 0 ? (
+									<ul className='flex-w gap-10'>
+									{selectedChecklist.map(item => (
+										<li key={item.id}>{item.text}</li>
+									))}
+									</ul>
+								) : (
+									<p>선택된 시술이 없습니다.</p>
+								)}
+							</div>
+						</Collapse>
+					</div>
+					<div className='btn-group'>
+						<button type='button' className='btn module-a line-normal'>
+							<span>이전</span>
+						</button>
+						<button type='button' className='btn module-a fill-primary' disabled={true}>
+							<span>다음</span>
+						</button>
+					</div>
+				</div>
 			</PageBody>
 			{/* // PageBody */}
 
-			<div className='page-action' ref={pageActionRef}>
-				<div className='medical-checklist-result'>
-					<div className="total">
-						<em>{selectedChecklist.length}</em>&nbsp;개 선택
-						<button type='button' className='btn'
-							onClick={() => setOpen(!open)}
-							aria-controls="medicalChecklistCollapse"
-							aria-expanded={open}
-						>
-							<span className='blind'>토글</span>
-						</button>
-					</div>
-					<Collapse in={open}
-                        onEntered={updatePageActionHeight} // 펼치는 애니메이션 끝난 후 실행
-                        onExited={updatePageActionHeight}  // 접는 애니메이션이 끝난 후 실행
-					>
-						<div id="medicalChecklistCollapse">
-							{selectedChecklist.length > 0 ? (
-								<ul className='flex-w gap-10'>
-								{selectedChecklist.map(item => (
-									<li key={item.id}>{item.text}</li>
-								))}
-								</ul>
-							) : (
-								<p>선택된 시술이 없습니다.</p>
-							)}
-						</div>
-					</Collapse>
-				</div>
-				<div className="btn-group">
-					<button type='button' className='btn module-a line-normal'>
-						<span>이전</span>
-					</button>
-					<button type='button' className='btn module-a fill-primary' disabled={true}>
-						<span>다음</span>
-					</button>
-				</div>
-			</div>
 		</div>
 	)
 }

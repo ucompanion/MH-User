@@ -17,7 +17,7 @@ const ElementPage = () => {
 			{/* // PageHeader */}
 
 			{/* PageBody */}
-			<PageBody pageName="template-b">
+			<PageBody menuClass="template-b">
 				{/* Buttons */}
 				<section className='section module-guide'>
 					<div className="section-header">

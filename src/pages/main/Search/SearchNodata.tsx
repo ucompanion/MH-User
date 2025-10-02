@@ -22,7 +22,7 @@ const SearchNodata: React.FC<PageProps> = (props) => {
 			{/* // PageHeader */}
 
 			{/* PageBody */}
-			<PageBody pageName="search-wrap">
+			<PageBody menuClass="search-wrap">
 				<Nodata
 					name='module-a'
 					title='검색결과가 없습니다.'

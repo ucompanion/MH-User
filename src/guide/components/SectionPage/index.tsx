@@ -17,7 +17,7 @@ const SectionPage = () => {
 			{/* // PageHeader */}
 
 			{/* PageBody */}
-			<PageBody pageName="template-b">
+			<PageBody menuClass="template-b">
 				<section className='section module-a'>
 					<div className="section-header">
 						<h2 className='section-h2'>상품 <em>260</em>건</h2>

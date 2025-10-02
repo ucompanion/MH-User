@@ -5,13 +5,13 @@ const StepA = () => {
 	return (
 		<div className='page template-c'>
 			{/* PageBody */}
-			<PageBody pageName="onboarding-wrap">
+			<PageBody menuClass="onboarding-wrap" optionClass="has-sticky-btm">
 				<SecStepA />
 			</PageBody>
 			{/* // PageBody */}
 
 			<div className='page-action'>
-				<div className="btn-group">
+				<div className='btn-group'>
 					<button type='button' className='btn module-a line-normal'>
 						<span>이전</span>
 					</button>

@@ -37,7 +37,7 @@ const Main: React.FC<PageProps> = (props) => {
 			{/* // PageHeader */}
 
 			{/* PageBody */}
-			<PageBody pageName="main-wrap">
+			<PageBody menuClass="main-wrap">
 				{/* Section: 인기검색어 */}
 				<SecPopular />
 

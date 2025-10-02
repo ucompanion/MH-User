@@ -653,6 +653,46 @@ input::-webkit-calendar-picker-indicator {
 			}
 		}
 
+		// page-body
+		&-body {
+			position: sticky;
+			left: 0;
+			bottom: 0;
+			margin-top: auto;
+			.page-action {
+				--padding: 20rem;
+				width: 100%;
+				background-color: #fff;
+
+				> div {
+					@include outer;
+				}
+
+				.btn-group {
+					display: flex;
+					gap: 10rem;
+					padding-top: var(--padding);
+					padding-bottom: var(--padding);
+					.btn {
+						flex: 1 1 auto;
+						width: 100%;
+					}
+				}
+			}
+			&.has-sticky-btm {
+				padding-bottom: 0 !important;
+
+				.page-action {
+					position: sticky;
+					left: 0;
+					bottom: 0;
+					margin-top: auto;
+					margin-top: auto;
+					padding-bottom: $safe-area-bottom;
+				}
+			}
+		}
+
 		// page-navigation
 		&-navigation {
 			position: sticky;
@@ -712,29 +752,6 @@ input::-webkit-calendar-picker-indicator {
 					&.is-selected {
 						--gnb-color: #1D262D;
 					}
-				}
-			}
-		}
-
-		// page-action
-		&-action {
-			--padding: 20rem;
-			position: sticky;
-			left: 0;
-			bottom: 0;
-			width: 100%;
-			background-color: #fff;
-			padding-bottom: $safe-area-bottom;
-			@include outer;
-
-			.btn-group {
-				display: flex;
-				gap: 10rem;
-				padding-top: var(--padding);
-				padding-bottom: var(--padding);
-				.btn {
-					flex: 1 1 auto;
-					width: 100%;
 				}
 			}
 		}

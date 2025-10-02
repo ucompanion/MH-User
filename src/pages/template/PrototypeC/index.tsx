@@ -1,22 +1,15 @@
 import { PageBody } from '../../../components/layouts';
+import Sec from './sections/Sec';
 
-const PrototypeC = () => {
+const Sigin = () => {
 	return (
 		<div className='page template-c'>
 			{/* PageBody */}
-			<PageBody pageName="template-b">
-				<section className='section'>
-					<div className="section-header">
-						<h2 className='section-h2'>Section Title</h2>
-					</div>
-					<div className="section-body">
-						<h3 className="content-h3">Content Title</h3>
-						Section Content
-					</div>
-				</section>
+			<PageBody menuClass="member-wrap">
+				<Sec />
 			</PageBody>
 			{/* // PageBody */}
 		</div>
 	)
 }
-export default PrototypeC;
+export default Sigin;

@@ -17,7 +17,7 @@ const ModalPage = () => {
 			{/* // PageHeader */}
 
 			{/* PageBody */}
-			<PageBody pageName="template-b">
+			<PageBody menuClass="template-b">
 				<section className='section module-guide'>
 					<div className="section-header">
 						<h2 className='section-h2'>Section Title</h2>

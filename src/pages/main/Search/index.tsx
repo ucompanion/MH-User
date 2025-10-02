@@ -24,7 +24,7 @@ const Search: React.FC<PageProps> = (props) => {
 			{/* // PageHeader */}
 
 			{/* PageBody */}
-			<PageBody pageName="search-wrap">
+			<PageBody menuClass="search-wrap">
 				{/* Section: 인기검색어 */}
 				<SecPopular />
 

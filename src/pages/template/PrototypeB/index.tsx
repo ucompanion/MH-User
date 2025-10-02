@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Icon } from '../../../components/ui';
-import { PageBody, PageFooter, PageHeader } from '../../../components/layouts';
+import { PageBody, PageHeader } from '../../../components/layouts';
+import Sec from './sections/Sec';
 
 const PrototypeB = () => {
 	const [isFavorite, setIsFavorite] = useState(false);
@@ -31,20 +32,10 @@ const PrototypeB = () => {
 			{/* // PageHeader */}
 
 			{/* PageBody */}
-			<PageBody pageName="template-b">
-				<section className='section'>
-					<div className="section-header">
-						<h2 className='section-h2'>Section Title</h2>
-					</div>
-					<div className="section-body">
-						<h3 className="content-h3">Content Title</h3>
-						Section Content
-					</div>
-				</section>
+			<PageBody menuClass="template-b">
+				<Sec />
 			</PageBody>
 			{/* // PageBody */}
-
-			<PageFooter />
 		</div>
 	)
 }

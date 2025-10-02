@@ -1,13 +1,14 @@
 interface BodyProps {
 	children: React.ReactNode;
-    pageName?: string;
+    menuClass?: string;
+    pageClass?: string;
+    optionClass?: string;
 }
 
-const PageBody: React.FC<BodyProps> = ({ children, pageName }) => {
-    const className = `page-body ${pageName}`;
+const PageBody: React.FC<BodyProps> = ({ menuClass, pageClass, children, optionClass }) => {
 	return (
-		<main className={className}>
-			<div className='page-content'>
+		<main className={`page-body ${menuClass} ${optionClass}`}>
+			<div className={`page-content ${pageClass}`}>
 				{children}
 			</div>
 		</main>

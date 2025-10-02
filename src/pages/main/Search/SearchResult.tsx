@@ -26,7 +26,7 @@ const SearchResult: React.FC<PageProps> = (props) => {
 			{/* // PageHeader */}
 
 			{/* PageBody */}
-			<PageBody pageName="search-wrap">
+			<PageBody menuClass="search-wrap">
 				{/* Section: 상품 */}
 				<SecProduct />
 

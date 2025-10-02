@@ -17,7 +17,7 @@ const DataPage = () => {
 			{/* // PageHeader */}
 
 			{/* PageBody */}
-			<PageBody pageName="template-b">
+			<PageBody menuClass="template-b">
 				{/* Data Bullet */}
 				<section className='section module-guide'>
 					<div className="section-header">

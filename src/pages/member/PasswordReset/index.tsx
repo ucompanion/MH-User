@@ -1,15 +1,15 @@
 import { PageBody } from '../../../components/layouts';
-import SecStep from './sections/SecStep';
+import Sec from './sections/Sec';
 
-const Step = () => {
+const PasswordReset = () => {
 	return (
 		<div className='page template-c'>
 			{/* PageBody */}
-			<PageBody menuClass="onboarding-wrap">
-				<SecStep />
+			<PageBody menuClass="member-wrap">
+				<Sec />
 			</PageBody>
 			{/* // PageBody */}
 		</div>
 	)
 }
-export default Step;
+export default PasswordReset;

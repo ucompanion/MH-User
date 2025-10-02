@@ -48,7 +48,7 @@ const FormPage = () => {
 			{/* // PageHeader */}
 
 			{/* PageBody */}
-			<PageBody pageName="template-b">
+			<PageBody menuClass="template-b">
 				{/* Form Textfeild */}
 				<section className='section module-guide'>
 					<div className="section-header">
