@@ -1,5 +1,5 @@
 import { Icon } from '../../../components/ui';
-import { PageBody, PageFooter, PageHeader } from '../../../components/layouts';
+import { PageBody,  PageHeader } from '../../../components/layouts';
 
 const ElementPage = () => {
 	return (
@@ -184,8 +184,6 @@ const ElementPage = () => {
 				{/* // Dividers */}
 			</PageBody>
 			{/* // PageBody */}
-
-			<PageFooter />
 		</div>
 	)
 }

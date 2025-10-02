@@ -24,6 +24,15 @@
 		z-index: 3;
 	}
 
+	&-group {
+		display: flex;
+		gap: var(--gap);
+
+		&.module-a {
+			--gap: 10rem;
+		}
+	}
+
 	// Variables
 	--color-normal: #ddd;
 	--color-dark: #444;
@@ -242,10 +251,10 @@
 	// demo-a
 	&.demo-a {
 		display: flex;
-		gap: 4rem;
+		gap: 8rem;
 
 		input {
-			--size: 22rem;
+			--size: 24rem;
 			width: var(--size);
 			height: var(--size);
 
@@ -552,6 +561,24 @@
 	}
 }
 
+.frm {
+	&.module-a {
+		display: flex;
+		flex-direction: column;
+
+		.frm-field + .frm-field{
+			margin-top: 26rem;
+		}
+
+		.frm-tit {
+			margin-bottom: 4rem;
+			.frm-label {
+				@include font-set(500, 16, #000);
+			}
+		}
+	}
+}
+
 /*-------------------------------------------------------------------
 	@@ Sections
 -------------------------------------------------------------------*/
@@ -563,6 +590,26 @@
 		padding: 0;
 	}
 
+	// Common
+	.section-header {
+		.section-h2 {
+			@include font-set(700, 20, #000);
+		}
+		.section-explain {
+			@include font-set(400, 12, #000);
+		}
+	}
+
+	.section-action {
+		.btn-group {
+			--gap: 10rem;
+		}
+		.btn.module-a {
+			flex: 1 1 auto;
+			width: 100%;
+		}
+	}
+
 	// module-a (Basic)
 	&.module-a {
 		padding-top: 24px;
@@ -572,7 +619,7 @@
 			justify-content: space-between;
 			margin-bottom: 16rem;
 			.section-h2 {
-				@include font-set(500, 19, #000);
+				@include font-set(500, 20, #000);
 				em {
 					color: var(--color-primary);
 				}
@@ -590,18 +637,22 @@
 		}
 	}
 
-	// module-b (Onboarding)
+	// module-b (Onboarding, Member)
 	&.module-b {
 		.section-header {
 			margin-bottom: 40rem;
 			.section-step {
 				@include font-set(700,15, #000);
 			}
-			.section-h1 {
-				@include font-set(700,20, #000);
-			}
-			.section-explain {
-				@include font-set(400,15, #000);
+		}
+	}
+
+	// module-b ()
+	&.module-c {
+		.section-header {
+			margin-bottom: 40rem;
+			.section-step {
+				@include font-set(700,15, #000);
 			}
 		}
 	}
@@ -611,9 +662,6 @@
 		padding-top: 20rem;
 		padding-bottom: 20rem;
 
-		.section-h2 {
-			@include font-set(700, 22, #000);
-		}
 		.content-h3 {
 			@include font-set(700, 16, #000);
 			margin-top: 30rem;
@@ -624,10 +672,6 @@
 		}
 		.content-h4 {
 			@include font-set(500, 14, #000);
-		}
-
-		.section-explain {
-			@include font-set(400, 14, #000);
 		}
 
 		.section-header {

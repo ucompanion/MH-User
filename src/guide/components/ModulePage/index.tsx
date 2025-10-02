@@ -1,5 +1,5 @@
 import { Icon } from '../../../components/ui';
-import { PageBody, PageFooter, PageHeader } from '../../../components/layouts';
+import { PageBody,  PageHeader } from '../../../components/layouts';
 import TabPage from './sections/TabPage';
 import AccordionPage from './sections/AccordionPage';
 import PopoverPage from './sections/PopoverPage';
@@ -34,8 +34,6 @@ const ModulePage = () => {
 				<SwiperPage />
 			</PageBody>
 			{/* // PageBody */}
-
-			<PageFooter />
 		</div>
 	)
 }

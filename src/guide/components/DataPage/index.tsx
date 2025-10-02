@@ -1,5 +1,5 @@
 import { Icon } from '../../../components/ui';
-import { PageBody, PageFooter, PageHeader } from '../../../components/layouts';
+import { PageBody,  PageHeader } from '../../../components/layouts';
 
 const DataPage = () => {
 	return (
@@ -74,8 +74,6 @@ const DataPage = () => {
 				{/* // Post */}
 			</PageBody>
 			{/* // PageBody */}
-
-			<PageFooter />
 		</div>
 	)
 }

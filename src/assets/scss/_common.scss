@@ -359,6 +359,11 @@ input::-webkit-calendar-picker-indicator {
 	flex-wrap: nowrap;
 }
 
+.flex-cols {
+	display: flex;
+	flex-direction: column;
+}
+
 // Gap
 .gap-4 {
 	gap: 4rem;
@@ -659,36 +664,55 @@ input::-webkit-calendar-picker-indicator {
 			left: 0;
 			bottom: 0;
 			margin-top: auto;
-			.page-action {
-				--padding: 20rem;
-				width: 100%;
-				background-color: #fff;
+			padding-bottom: $safe-area-bottom;
 
-				> div {
-					@include outer;
+			.page-content {
+				--content-top: 0rem;
+				--content-bottom: 40rem;
+				padding-top: var(--content-top);
+				padding-bottom: var(--content-bottom);
+			}
+
+			&.has-page-action {
+				.page-content {
+					padding-bottom: 0;
+				}
+			}
+
+			.page-action-sticky {
+				position: sticky;
+				left: 0;
+				bottom: 0;
+				margin-top: auto;
+				width: 100%;
+
+				&::before {
+					content:'';
+					display: block;
+					height: calc(var(--content-bottom) - var(--padding));
 				}
 
-				.btn-group {
-					display: flex;
-					gap: 10rem;
+				.page-action {
+					--padding: 20rem;
+					@include outer;
+					background-color: #fff;
+					margin-top: 0;
 					padding-top: var(--padding);
-					padding-bottom: var(--padding);
-					.btn {
+					padding-bottom: calc(var(--padding) + #{$safe-area-bottom});
+				}
+			}
+
+			.page-action {
+				display: flex;
+				flex-direction: column;
+				margin-top: var(--content-bottom);
+				padding-bottom: $safe-area-bottom;
+
+				.btn {
+					&.module-a {
 						flex: 1 1 auto;
 						width: 100%;
 					}
-				}
-			}
-			&.has-sticky-btm {
-				padding-bottom: 0 !important;
-
-				.page-action {
-					position: sticky;
-					left: 0;
-					bottom: 0;
-					margin-top: auto;
-					margin-top: auto;
-					padding-bottom: $safe-area-bottom;
 				}
 			}
 		}
@@ -779,7 +803,8 @@ input::-webkit-calendar-picker-indicator {
 		}
 
 		.page-body {
-			padding-bottom: 40rem;
+			--content-top: 0rem;
+			--content-bottom: 40rem;
 		}
 	}
 
@@ -789,16 +814,29 @@ input::-webkit-calendar-picker-indicator {
 			--header-bgcolor: #000;
 			--header-color: #fff;
 		}
-		.page-body {
-			padding-bottom: 40rem;
+		.page-content {
+			--content-top: 0rem;
+			--content-bottom: 40rem;
 		}
 	}
 
 	// template-c (sub - onboarding)
 	&.template-c {
-		.page-body {
-			padding-top: 100rem;
-			padding-bottom: 40rem;
+		.page-content {
+			--content-top: 100rem;
+			--content-bottom: 40rem;
+		}
+	}
+
+	// template-d (sub - member)
+	&.template-d {
+		.page-header {
+			--header-bgcolor: #fff;
+			--header-color: #000;
+		}
+		.page-content {
+			--content-top: 42rem;
+			--content-bottom: 40rem;
 		}
 	}
 }

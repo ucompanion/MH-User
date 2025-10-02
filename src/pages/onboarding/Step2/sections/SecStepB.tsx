@@ -31,7 +31,7 @@ const SecStepB = () => {
         <section className='section module-b'>
             <div className="section-header">
                 <div className="section-step">2/4</div>
-                <h1 className="section-h1">시술을 희망하는 부위가 어딘가요?</h1>
+                <h1 className="section-h2">시술을 희망하는 부위가 어딘가요?</h1>
                 <p className="section-explain">최대 N개까지 선택할 수 있어요.</p>
             </div>
             <div className="section-body">

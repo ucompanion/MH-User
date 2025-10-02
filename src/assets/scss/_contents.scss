@@ -5,372 +5,400 @@
 	속성순서 : 레이아웃, 크기간격, 박스모양, 글자모양, 문단모양, 기타모양
 -------------------------------------------------------------------*/
 /*-------------------------------------------------------------------
-	@@ 메인
+	@@ 공통
 -------------------------------------------------------------------*/
-// 섹션: 인기검색어
-.popular-section {
-	display: flex;
-	align-items: center;
-	flex-wrap: nowrap;
-	gap: 15rem;
-	width: 100%;
-	height: 48rem;
-	overflow: auto;
-
-	.section-header,
-	.section-body {
-		flex: none;
-	}
-
-	.section-h2 {
-		@include font-set(600,14, #000);
-	}
-}
-
-// 섹션: 최근검색어
-.keyword-section {
-	.section-header {
-		display: flex;
-		justify-content: space-between;
-	}
-}
-
 // 키워드 목록
-.keyword-list {
-	flex: none;
-	display: flex;
-	flex-wrap: nowrap;
-	gap: 6rem;
-
-	li {
+.keyword {
+	&-list {
 		flex: none;
-	}
-
-	.btn {
-		flex: none;
-		height: 28rem;
-		padding: 0px 10rem;
-		border-radius: 6rem;
-		@include font-set(400, 15, #725A5A);
-		border-color: var(--color-primary-white);
-		background-color: var(--color-primary-white);
-	}
-}
-
-// 진료 목록
-.mediCate-list {
-	flex: none;
-	display: flex;
-	flex-wrap: nowrap;
-	gap: 6rem;
-
-	.mediCate-tab {
-		flex: none;
-		height: 28rem;
-		padding: 0px 10rem;
-		border-radius: 6rem;
-		@include font-set(400, 15, #725A5A);
-		border-color: var(--color-primary-white);
-		background-color: var(--color-primary-white);
-		&.is-selected {
-			background-color: var(--color-primary);
-			color: #fff;
-		}
-	}
-}
-
-.keyword-scroll,
-.mediCate-scroll {
-	@include outer-scroll;
-	margin-bottom: 16rem;
-}
-
-// 롤링배너 스와이프
-.ad-swiper {
-	&.swiper-custom {
-		--pagination-color: rgba(0,0,0,0.16);
-
-		.swiper-controller {
-			position: absolute;
-			left: 0;
-			bottom: 14rem;
-			z-index: 10;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			gap: 10rem;
-			width: 100%;
-		}
-	}
-}
-
-// 고민부위
-.region-list {
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	gap: clamp(10rem,calc((100vw/393)*15) ,30rem);
-
-	.region-item {
 		display: flex;
-	}
+		flex-wrap: nowrap;
+		gap: 6rem;
 
-	.btn {
-		width: 100%;
-		aspect-ratio: 1/1;
-		border-radius: 50%;
-		span {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			position: absolute;
-			left: 0;
-			top: 0;
-			width: 100%;
-			height: 100%;
-			background-color: rgba(255, 102, 204, 0.6);
-			@include font-set(700,13,#fff);
-			line-height: 1.2;
-			white-space: pre-line;
+		li {
+			flex: none;
 		}
-	}
-}
 
-// 띠배너그룹
-.bnr-group {
-	display: flex;
-	flex-direction: column;
-	gap: 16rem;
-}
-
-// 상품카드
-.product-item {
-	margin-top: 16rem;
-	padding-bottom: 25rem;
-	border-bottom: 1px solid rgba(34, 38, 43, 0.09);
-	&:first-child {
-		margin-top: 0;
-	}
-}
-.product-card {
-	display: flex;
-	gap: 18px;
-	.product-imge {
-		flex: noen;
-		.thumb {
-			width: 90rem;
-			height: 90rem;
-			border-radius: 10rem;
-			overflow: hidden;
-			img {
-				@include obj-cover;
-			}
+		.btn {
+			flex: none;
+			height: 28rem;
+			padding: 0px 10rem;
+			border-radius: 6rem;
+			@include font-set(400, 15, #725A5A);
+			border-color: var(--color-primary-white);
+			background-color: var(--color-primary-white);
 		}
 	}
-	.product-cont {
-		flex: 1 1 auto;
-		overflow: hidden;
-		.title {
-			@include font-set(600, 19, rgba(0, 0, 0, 1));
-		}
-		.summary {
-			margin-top: 5rem;
-			@include font-set(400, 14, #49515B);
-			@include ellipsis1;
-		}
-		.price {
-			margin-top: 5rem;
-			@include font-set(700, 16, #000000);
-		}
-		.sale {
-			margin-top: 11rem;
-			@include font-set(700, 16, var(--color-primary));
-		}
-	}
-}
-
-// 병원카드
-.hospitel {
-	// hospitel-scroll
 	&-scroll {
 		@include outer-scroll;
-		gap: 10rem;
-
-		.hospitel-card {
-			display: flex;
-			flex-direction: column;
-			gap: 15rem;
-			width: 160rem;
-			.hospitel-imge {
-				.thumb {
-					width: 100%;
-					height: 144rem;
-					border-radius: 10rem;
-					overflow: hidden;
-					img {
-						@include obj-cover;
-					}
-				}
-			}
-			.hospitel-cont {
-				.title {
-					@include font-set(600, 17, #000);
-				}
-				.city {
-					@include font-set(400, 14, #49515B);
-				}
-			}
-		}
-	}
-
-	// hospitel-list
-	&-list {
-		.hospitel-item {
-			padding: 20rem 0;
-			border-bottom: 1px solid #ddd;
-		}
-		.hospitel-card {
-			display: flex;
-			flex-direction: column;
-			gap: 15rem;
-			width: 100%;
-			.hospitel-imge {
-				.thumb {
-					width: 100%;
-					height: 144rem;
-					border-radius: 10rem;
-					overflow: hidden;
-					img {
-						@include obj-cover;
-					}
-				}
-			}
-			.hospitel-cont {
-				.title {
-					@include font-set(600, 17, #000);
-				}
-				.city {
-					@include font-set(400, 14, #49515B);
-				}
-			}
-		}
-
 	}
 }
 
-// 의사카드
-.doctor-list {
-	display: flex;
-	flex-direction: column;
-	gap: 10rem;
-
-	.doctor-card {
+/*-------------------------------------------------------------------
+	@@ 메인
+-------------------------------------------------------------------*/
+// 메인
+.main-wrap {
+	// 섹션: 인기검색어
+	.popular-sec {
 		display: flex;
 		align-items: center;
-		gap: 16rem;
-		.doctor-image {
-			.thumb {
-				display: flex;
-				align-items: flex-start;
-				justify-content: center;
-				width: 120rem;
-				height: 120rem;
-				overflow: hidden;
-				border-radius: 50%;
-				img {
-					width: 100%;
+		flex-wrap: nowrap;
+		overflow: auto;
+		gap: 15rem;
+		width: 100%;
+		height: 48rem;
+
+		.section-header,
+		.section-body {
+			flex: none;
+		}
+
+		.section-h2 {
+			@include font-set(600,14, #000);
+		}
+	}
+
+	// 진료 목록
+	.mediCate {
+		// mediCate-list
+		&-list {
+			flex: none;
+			display: flex;
+			flex-wrap: nowrap;
+			gap: 6rem;
+
+			.mediCate-tab {
+				flex: none;
+				height: 28rem;
+				padding: 0px 10rem;
+				border-radius: 6rem;
+				@include font-set(400, 15, #725A5A);
+				border-color: var(--color-primary-white);
+				background-color: var(--color-primary-white);
+				&.is-selected {
+					background-color: var(--color-primary);
+					color: #fff;
 				}
 			}
 		}
-		.doctor-cont {
-			flex: 1 1 auto;
-			overflow: hidden;
-			.title {
-				@include font-set(600, 17, #000);
-			}
-			.agency {
-				margin-top: 10rem;
-				@include font-set(400, 17, #49515B);
-			}
-			.tags {
+		// mediCate-scroll
+		&-scroll {
+			@include outer-scroll;
+			margin-bottom: 16rem;
+		}
+	}
+
+	// 롤링배너 스와이프
+	.ad-swiper {
+		&.swiper-custom {
+			--pagination-color: rgba(0,0,0,0.16);
+
+			.swiper-controller {
+				position: absolute;
+				left: 0;
+				bottom: 14rem;
+				z-index: 10;
 				display: flex;
-				flex-wrap: wrap;
-				gap: 6rem;
-				margin-top: 10rem;
+				justify-content: center;
+				align-items: center;
+				gap: 10rem;
+				width: 100%;
+			}
+		}
+	}
+
+	// 고민부위
+	.region {
+		// region-list
+		&-list {
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			gap: clamp(10rem,calc((100vw/393)*15) ,30rem);
+			.region-item {
+				display: flex;
+				.btn {
+					width: 100%;
+					aspect-ratio: 1/1;
+					border-radius: 50%;
+					span {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						position: absolute;
+						left: 0;
+						top: 0;
+						width: 100%;
+						height: 100%;
+						background-color: rgba(255, 102, 204, 0.6);
+						@include font-set(700,13,#fff);
+						line-height: 1.2;
+						white-space: pre-line;
+					}
+				}
+			}
+		}
+	}
+
+	// 띠배너그룹
+	.bnr-group {
+		display: flex;
+		flex-direction: column;
+		gap: 16rem;
+	}
+
+	// 상품카드
+	.product {
+		// product-item
+		&-item {
+			margin-top: 16rem;
+			padding-bottom: 25rem;
+			border-bottom: 1px solid rgba(34, 38, 43, 0.09);
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+		// product-card
+		&-card {
+			display: flex;
+			gap: 18px;
+			.product-imge {
+				flex: noen;
+				.thumb {
+					width: 90rem;
+					height: 90rem;
+					border-radius: 10rem;
+					overflow: hidden;
+					img {
+						@include obj-cover;
+					}
+				}
+			}
+			.product-cont {
+				flex: 1 1 auto;
+				overflow: hidden;
+				.title {
+					@include font-set(600, 19, rgba(0, 0, 0, 1));
+				}
+				.summary {
+					margin-top: 5rem;
+					@include font-set(400, 14, #49515B);
+					@include ellipsis1;
+				}
+				.price {
+					margin-top: 5rem;
+					@include font-set(700, 16, #000000);
+				}
+				.sale {
+					margin-top: 11rem;
+					@include font-set(700, 16, var(--color-primary));
+				}
+			}
+		}
+	}
+
+	// 병원카드
+	.hospitel {
+		// hospitel-scroll
+		&-scroll {
+			@include outer-scroll;
+			gap: 10rem;
+
+			.hospitel-card {
+				display: flex;
+				flex-direction: column;
+				gap: 15rem;
+				width: 160rem;
+				.hospitel-imge {
+					.thumb {
+						width: 100%;
+						height: 144rem;
+						border-radius: 10rem;
+						overflow: hidden;
+						img {
+							@include obj-cover;
+						}
+					}
+				}
+				.hospitel-cont {
+					.title {
+						@include font-set(600, 17, #000);
+					}
+					.city {
+						@include font-set(400, 14, #49515B);
+					}
+				}
+			}
+		}
+
+		// hospitel-list
+		&-list {
+			.hospitel-item {
+				padding: 20rem 0;
+				border-bottom: 1px solid #ddd;
+			}
+			.hospitel-card {
+				display: flex;
+				flex-direction: column;
+				gap: 15rem;
+				width: 100%;
+				.hospitel-imge {
+					.thumb {
+						width: 100%;
+						height: 144rem;
+						border-radius: 10rem;
+						overflow: hidden;
+						img {
+							@include obj-cover;
+						}
+					}
+				}
+				.hospitel-cont {
+					.title {
+						@include font-set(600, 17, #000);
+					}
+					.city {
+						@include font-set(400, 14, #49515B);
+					}
+				}
+			}
+
+		}
+	}
+
+	// 의사카드
+	.doctor {
+		// doctor-list
+		&-list {
+			display: flex;
+			flex-direction: column;
+			gap: 10rem;
+		}
+		// doctor-card
+		&-card {
+			display: flex;
+			align-items: center;
+			gap: 16rem;
+			.doctor-image {
+				.thumb {
+					display: flex;
+					align-items: flex-start;
+					justify-content: center;
+					width: 120rem;
+					height: 120rem;
+					overflow: hidden;
+					border-radius: 50%;
+					img {
+						width: 100%;
+					}
+				}
+			}
+			.doctor-cont {
+				flex: 1 1 auto;
+				overflow: hidden;
+				.title {
+					@include font-set(600, 17, #000);
+				}
+				.agency {
+					margin-top: 10rem;
+					@include font-set(400, 17, #49515B);
+				}
+				.tags {
+					display: flex;
+					flex-wrap: wrap;
+					gap: 6rem;
+					margin-top: 10rem;
+				}
+			}
+		}
+	}
+
+	// 리뷰카드
+	.review {
+		// review-list
+		&-list {
+			display: flex;
+			flex-direction: column;
+			gap: 16rem;
+			.review-item {
+				width: 100%;
+			}
+		}
+		// review-card
+		&-card {
+			.review-profile {
+				display: flex;
+				align-items: center;
+				gap: 12rem;
+				.avata {
+					flex: none;
+					width: 50rem;
+					height: 50rem;
+					border-radius: 50%;
+					overflow: hidden;
+					img {
+						@include obj-cover;
+					}
+				}
+				.cont {
+					overflow: hidden;
+					flex: 1 1 auto;
+					.nicname {
+						@include font-set(500, 17, #000);
+					}
+					.date {
+						@include font-set(400, 15, #49515B);
+					}
+				}
+			}
+			.review-image {
+				--gap: 12rem;
+				display: flex;
+				gap: var(--gap);
+				margin-top: 20rem;
+				.thumb {
+					position: relative;
+					width: calc(100% - (var(--gap)/2));
+					aspect-ratio: 170/164;
+					overflow: hidden;
+					img {
+						@include obj-cover;
+					}
+					.label {
+						display: block;
+						position: absolute;
+						left: 12rem;
+						top: 7rem;
+						padding: 0 8rem;
+						@include font-set(400, 15, #fff);
+						border-radius: 20rem;
+						background-color: rgba(0, 0, 0, 0.5);
+					}
+				}
+			}
+			.review-cont {
+				margin-top: 20rem;
+				.title {
+					@include font-set(500, 17, #000);
+					@include ellipsis1;
+				}
+				.summary {
+					margin-top: 4rem;
+					@include font-set(400, 17, #49515B);
+					@include ellipsis2;
+				}
 			}
 		}
 	}
 }
 
-// 리뷰카드
-.review-list {
-	display: flex;
-	flex-direction: column;
-	gap: 16rem;
-	.review-item {
-		width: 100%;
-	}
-	.review-card {
-		.review-profile {
+// 검색
+.search-wrap {
+	// 섹션: 최근검색어
+	.keyword-section {
+		.section-header {
 			display: flex;
-			align-items: center;
-			gap: 12rem;
-			.avata {
-				flex: none;
-				width: 50rem;
-				height: 50rem;
-				border-radius: 50%;
-				overflow: hidden;
-				img {
-					@include obj-cover;
-				}
-			}
-			.cont {
-				overflow: hidden;
-				flex: 1 1 auto;
-				.nicname {
-					@include font-set(500, 17, #000);
-				}
-				.date {
-					@include font-set(400, 15, #49515B);
-				}
-			}
-		}
-		.review-image {
-			--gap: 12rem;
-			display: flex;
-			gap: var(--gap);
-			margin-top: 20rem;
-			.thumb {
-				position: relative;
-				width: calc(100% - (var(--gap)/2));
-				aspect-ratio: 170/164;
-				overflow: hidden;
-				img {
-					@include obj-cover;
-				}
-				.label {
-					display: block;
-					position: absolute;
-					left: 12rem;
-					top: 7rem;
-					padding: 0 8rem;
-					@include font-set(400, 15, #fff);
-					border-radius: 20rem;
-					background-color: rgba(0, 0, 0, 0.5);
-				}
-			}
-		}
-		.review-cont {
-			margin-top: 20rem;
-			.title {
-				@include font-set(500, 17, #000);
-				@include ellipsis1;
-			}
-			.summary {
-				margin-top: 4rem;
-				@include font-set(400, 17, #49515B);
-				@include ellipsis2;
-			}
+			justify-content: space-between;
 		}
 	}
 }
@@ -378,91 +406,135 @@
 /*-------------------------------------------------------------------
 	@@ 온보딩
 -------------------------------------------------------------------*/
-// Step2: 고민중인 부위선택
-.region-choice-list {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: clamp(10rem,calc((100vw/393)*15) ,30rem);
+// 온보딩
+.onboarding-wrap {
 
-	.region-item {
-		display: flex;
-	}
+	// Step2: 고민중인 부위선택
+	.region-choice-list {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: clamp(10rem,calc((100vw/393)*15) ,30rem);
 
-	.frm-checkbox {
-		position: relative;
-		.checkbox {
-			position: absolute;
-			left: 0;
-			top: 0;
-			--size: 22rem;
-			width: var(--size);
-			height: var(--size);
-		}
-		.label {
-			position: relative;
+		.region-item {
 			display: flex;
-			flex-direction: column;
-			justify-content: flex-start;
 		}
-	}
-}
 
-// Step3: 관심있는 시술선택
-.medical-checklist {
-	padding: 20rem 0;
-	.category-title {
-		@include font-set(700,16, #000);
-	}
-
-	.dep2-chk,
-	.dep3-chk {
-		display: flex;
-		align-items: center;
-		height: 48rem;
-	}
-	.dep3-list {
-		padding-left: 20rem;
-	}
-
-	// 선택결과
-	&-result {
-		padding-top: var(--padding);
-
-		.total {
-			display: flex;
-			align-items: center;
+		.frm-checkbox {
 			position: relative;
-			height: 40rem;
-			@include font-set(700, 16, #000);
-			em {
-				color: var(--color-primary);
-			}
-
-			.btn {
-				--size: 40rem;
+			.checkbox {
 				position: absolute;
-				right: 0;
-				top: calc(50% - (var(--size)/2));
+				left: 0;
+				top: 0;
+				--size: 22rem;
 				width: var(--size);
 				height: var(--size);
-				&::before {
-					content:'';
-					display: block;
-					width: 16rem;
-					height: 16rem;
-					@include bg-default;
-					background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.6263 9.84101C1.80976 10.0365 2.1258 10.0542 2.33219 9.88035L8.00001 5.10745L13.6678 9.88035C13.8742 10.0541 14.1903 10.0365 14.3737 9.84101C14.5572 9.64548 14.5386 9.34608 14.3322 9.17227L8.33219 4.11965C8.14274 3.96012 7.85727 3.96012 7.66782 4.11965L1.66782 9.17228C1.46143 9.34608 1.44284 9.64548 1.6263 9.84101Z' fill='%23A4A6AA'/%3E%3C/svg%3E%0A");
+			}
+			.label {
+				position: relative;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-start;
+			}
+		}
+	}
+
+	// Step3: 관심있는 시술선택
+	.medical-checklist {
+		padding: 20rem 0;
+		.category-title {
+			@include font-set(700,16, #000);
+		}
+
+		.dep2-chk,
+		.dep3-chk {
+			display: flex;
+			align-items: center;
+			height: 48rem;
+		}
+		.dep3-list {
+			padding-left: 20rem;
+		}
+
+		// 선택결과
+		&-result {
+			padding-top: var(--padding);
+
+			.total {
+				display: flex;
+				align-items: center;
+				position: relative;
+				height: 40rem;
+				@include font-set(700, 16, #000);
+				em {
+					color: var(--color-primary);
 				}
-				&[aria-expanded='true']::before {
-					transform: scaleY(-1);
+
+				.btn {
+					--size: 40rem;
+					position: absolute;
+					right: 0;
+					top: calc(50% - (var(--size)/2));
+					width: var(--size);
+					height: var(--size);
+					&::before {
+						content:'';
+						display: block;
+						width: 16rem;
+						height: 16rem;
+						@include bg-default;
+						background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.6263 9.84101C1.80976 10.0365 2.1258 10.0542 2.33219 9.88035L8.00001 5.10745L13.6678 9.88035C13.8742 10.0541 14.1903 10.0365 14.3737 9.84101C14.5572 9.64548 14.5386 9.34608 14.3322 9.17227L8.33219 4.11965C8.14274 3.96012 7.85727 3.96012 7.66782 4.11965L1.66782 9.17228C1.46143 9.34608 1.44284 9.64548 1.6263 9.84101Z' fill='%23A4A6AA'/%3E%3C/svg%3E%0A");
+					}
+					&[aria-expanded='true']::before {
+						transform: scaleY(-1);
+					}
 				}
 			}
 		}
 	}
 }
 
+/*-------------------------------------------------------------------
+	@@ 회원_로그인
+-------------------------------------------------------------------*/
+// 회원_로그인
+.member-wrap {
+	// 섹션: 인트로
+	.intro-sec {
+		.section-header {
+			text-align: center;
+		}
+		.section-body {
+			.page-action {
+				margin-top: 40rem;
+			}
+			.intro-img {
+				display: flex;
+				justify-content: center;
+
+				img {
+					width: 250rem;
+				}
+			}
+		}
+	}
+
+	.sigin-sec {
+		.session-chk {
+			margin-top: 10rem;
+		}
+		.sigin-helper {
+			margin-top: 20rem;
+			text-align: center;
+		}
+	}
+}
 
 /*-------------------------------------------------------------------
-	@@ 팝업명
+	@@ 카테고리명
+-------------------------------------------------------------------*/
+/* 섹션명 > 버튼명 > 팝업명 */
+
+/*-------------------------------------------------------------------
+	@@ 카테고리명
 -------------------------------------------------------------------*/
 /* 섹션명 > 버튼명 > 팝업명 */

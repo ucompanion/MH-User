@@ -14,7 +14,7 @@ const popularKeywordData = [
 
 const SecPopular = () => {
     return (
-        <ScrollContainer className='section popular-section'>
+        <ScrollContainer className='section popular-sec'>
             <div className="section-header">
                 <h2 className="section-h2">人気キーワード</h2>
             </div>

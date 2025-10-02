@@ -1,5 +1,5 @@
 import { Icon } from '../../../components/ui';
-import { PageBody, PageFooter, PageHeader } from '../../../components/layouts';
+import { PageBody,  PageHeader } from '../../../components/layouts';
 
 const ModalPage = () => {
 	return (
@@ -29,8 +29,6 @@ const ModalPage = () => {
 				</section>
 			</PageBody>
 			{/* // PageBody */}
-
-			<PageFooter />
 		</div>
 	)
 }

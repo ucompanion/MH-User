@@ -1,5 +1,5 @@
 import { Checkbox, Radio, Icon } from '../../../components/ui';
-import { PageBody, PageFooter, PageHeader } from '../../../components/layouts';
+import { PageBody,  PageHeader } from '../../../components/layouts';
 import { useState } from 'react';
 
 const FormPage = () => {
@@ -56,41 +56,41 @@ const FormPage = () => {
 					</div>
 					<div className="section-body">
 						<h3 className="content-h3">demo-a</h3>
-						<div className='frm-input demo-a'>
+						<div className='frm-input module-a'>
 							<input type="text" className='input' placeholder='Placeholder' />
 						</div>
 						<br />
-						<div className='frm-input demo-a'>
+						<div className='frm-input module-a'>
 							<input type="text" className='input' value={"Valued"} />
 						</div>
 						<br />
-						<div className='frm-input demo-a'>
+						<div className='frm-input module-a'>
 							<input type="text" className='input' value={"Disabled"} disabled />
 						</div>
 						<br />
-						<div className='frm-input demo-a is-errored'>
+						<div className='frm-input module-a is-errored'>
 							<input type="text" className='input' value={"Errored"} />
 						</div>
 						<br />
-						<div className='frm-input demo-a'>
+						<div className='frm-input module-a'>
 							<textarea name="" id="" cols={10} rows={5} className='textarea'></textarea>
 							<p className='bytes'><span className="count">0</span> / <span className="total">100Bytes</span></p>
 						</div>
 						<br />
-						<div className='frm-input demo-a'>
+						<div className='frm-input module-a'>
 							<textarea name="" id="" cols={10} rows={5} className='textarea'></textarea>
 							<p className='bytes'><span className="count">0</span> / <span className="total">100Bytes</span></p>
 						</div>
 
 						{/* <h3 className="content-h3">Select</h3> */}
 						<br />
-						<div className="frm-input demo-a">
+						<div className="frm-input module-a">
 							<select name="" id="" className='select'>
 								<option value="">전체</option>
 							</select>
 						</div>
 						<br />
-						<div className="frm-input demo-a">
+						<div className="frm-input module-a">
 							<select name="" id="" className='select' disabled>
 								<option value="">전체</option>
 							</select>
@@ -99,21 +99,21 @@ const FormPage = () => {
 						<h3 className="content-h3">.frm-input-group</h3>
 						<p>[Default]</p>
 						<div className="frm-input-group">
-							<div className='frm-input demo-a'>
+							<div className='frm-input module-a'>
 								<input type="text" className='input' placeholder='Placeholder' />
 							</div>
-							<div className='frm-input demo-a'>
+							<div className='frm-input module-a'>
 								<input type="text" className='input' placeholder='Placeholder' />
 							</div>
 						</div>
 						<br />
 						<p>&gt; .flex-a</p>
 						<div className="frm-input-group">
-							<div className='frm-input demo-a flex-a'>
+							<div className='frm-input module-a flex-a'>
 								<input type="text" className='input' placeholder='Placeholder' />
 							</div>
 							<div className="frm-split">~</div>
-							<div className='frm-input demo-a flex-a'>
+							<div className='frm-input module-a flex-a'>
 								<input type="text" className='input' placeholder='Placeholder' />
 							</div>
 						</div>
@@ -401,8 +401,6 @@ const FormPage = () => {
 				{/* Form Switch */}
 			</PageBody>
 			{/* // PageBody */}
-
-			<PageFooter />
 		</div>
 	)
 }

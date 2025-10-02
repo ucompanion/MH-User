@@ -1,5 +1,5 @@
 import { Icon } from '../../../components/ui';
-import { PageBody, PageFooter, PageHeader } from '../../../components/layouts';
+import { PageBody,  PageHeader } from '../../../components/layouts';
 
 const PostPage = () => {
 	return (
@@ -43,8 +43,6 @@ const PostPage = () => {
 				{/* //후기 */}
 			</PageBody>
 			{/* // PageBody */}
-
-			<PageFooter />
 		</div>
 	)
 }

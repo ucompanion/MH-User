@@ -1,5 +1,5 @@
 import { Icon } from '../../../components/ui';
-import { PageBody, PageFooter, PageHeader } from '../../../components/layouts';
+import { PageBody, PageHeader } from '../../../components/layouts';
 
 const SectionPage = () => {
 	return (
@@ -35,18 +35,15 @@ const SectionPage = () => {
 				<section className='section module-b'>
 					<div className="section-header">
 						<div className='section-step'>1/4</div>
-						<h1 className='section-h1'>관심있는 시술이 있나요?</h1>
+						<h1 className='section-h2'>관심있는 시술이 있나요?</h1>
 						<p className="section-explain">최대 N개까지 선택할 수 있어요.</p>
 					</div>
 					<div className="section-body">
 						Section Content
 					</div>
 				</section>
-
 			</PageBody>
 			{/* // PageBody */}
-
-			<PageFooter />
 		</div>
 	)
 }
