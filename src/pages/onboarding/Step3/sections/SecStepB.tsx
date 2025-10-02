@@ -186,7 +186,7 @@ const SecStepB = ({ onSelectedItemsChange, pageActionHeight }: MyCustomScrollspy
             currentChildId = parentId;
         }
         return newItems;
-    }, [itemMap, parentMap, tabKeys]);
+    }, [tabKeys]);
 
     // 체크기능: 체크박스 클릭 핸들러
     const handleCheckboxClick = useCallback((clickedId: string) => {
@@ -229,7 +229,7 @@ const SecStepB = ({ onSelectedItemsChange, pageActionHeight }: MyCustomScrollspy
 
             return newSelectedItems;
         });
-    }, [getAllItemIds, updateParentCheckboxState, itemMap]);
+    }, [getAllItemIds, updateParentCheckboxState]);
 
     // 선택된 항목이 변경될 때마다 부모 컴포넌트에 전달하는 useEffect
     useEffect(() => {
@@ -256,7 +256,7 @@ const SecStepB = ({ onSelectedItemsChange, pageActionHeight }: MyCustomScrollspy
         const scrollOffset = stickyTabsHeight + 10;
         const handleScroll = () => {
             const currentScrollY = window.scrollY || document.documentElement.scrollTop;
-            const effectiveViewportBottom = window.innerHeight - pageActionHeight;
+            // const effectiveViewportBottom = window.innerHeight - pageActionHeight;
             let newActiveKey = '';
             for (let i = tabKeys.length - 1; i >= 0; i--) {
                 const key = tabKeys[i];
@@ -305,7 +305,7 @@ const SecStepB = ({ onSelectedItemsChange, pageActionHeight }: MyCustomScrollspy
         const lastContentInnerElement = lastTabPaneElement?.querySelector('.medical-checklist') as HTMLDivElement;
         const lastContentInnerHeight = lastContentInnerElement ? lastContentInnerElement.offsetHeight : 0;
         const availableViewportHeightBelowSticky = viewportHeight - stickyHeight - pageActionHeight;
-        let neededPadding = Math.max(0, availableViewportHeightBelowSticky - lastContentInnerHeight - 40);
+        let neededPadding = Math.max(0, availableViewportHeightBelowSticky - lastContentInnerHeight);
         const minExtraPadding = 0;
         return Math.max(neededPadding, minExtraPadding);
     }, [tabKeys, pageActionHeight]);
