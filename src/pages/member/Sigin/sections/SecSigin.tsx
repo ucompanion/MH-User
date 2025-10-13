@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Checkbox } from "../../../../components/ui";
+import { Checkbox, Input } from "../../../../components/ui";
 import { Link } from "react-router-dom";
 
 const SecSigin = () => {
@@ -17,9 +17,11 @@ const SecSigin = () => {
 							<label htmlFor="frmName" className="frm-label">이름</label>
 						</div>
 						<div className="frm-content">
-							<div className="frm-input module-a">
-								<input type="text" className="input" id="frmName" placeholder="이메일을 입력해주세요." />
-							</div>
+							<Input
+								className='module-a'
+								id="frmName"
+								placeholder='이메일을 입력해주세요.'
+							/>
 						</div>
 					</div>
 					<div className="frm-field">
@@ -27,9 +29,12 @@ const SecSigin = () => {
 							<label htmlFor="frmPw" className="frm-label">비밀번호</label>
 						</div>
 						<div className="frm-content">
-							<div className="frm-input module-a">
-								<input type="password" className="input" id="frmPw" placeholder="비밀번호를 입력해주세요." />
-							</div>
+							<Input
+								className='module-a'
+								type="password"
+								id="frmPw"
+								placeholder='비밀번호를 입력해주세요.'
+							/>
 						</div>
 					</div>
 

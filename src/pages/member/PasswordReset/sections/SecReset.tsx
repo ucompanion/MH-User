@@ -1,3 +1,5 @@
+import { Input } from "../../../../components/ui";
+
 const SecReset = () => {
 	return (
 		<section className='section module-b sigin-reset-sec'>
@@ -12,9 +14,12 @@ const SecReset = () => {
 							<label htmlFor="frmPw" className="frm-label">새 비밀번호</label>
 						</div>
 						<div className="frm-content">
-							<div className="frm-input module-a">
-								<input type="password" className="input" id="frmPw" placeholder="새 비밀번호를 입력해주세요." />
-							</div>
+							<Input
+								className='module-a flex-a'
+								type="password"
+								id="frmPw"
+								placeholder='새 비밀번호를 입력해주세요.'
+							/>
 							<div className="frm-desc">
 								<p>비밀번호는 숫자, 영문자, 특수문자 포함 9~2자로 입력해주세요.</p>
 							</div>
@@ -25,9 +30,12 @@ const SecReset = () => {
 							<label htmlFor="frmMail2" className="frm-label">새 비밀번호 확인</label>
 						</div>
 						<div className="frm-content">
-							<div className="frm-input module-a">
-								<input type="password" className="input" id="frmMail2" placeholder="새 비밀번호를 입력해주세요." />
-							</div>
+							<Input
+								className='module-a flex-a'
+								type="password"
+								id="frmMail2"
+								placeholder='새 비밀번호를 입력해주세요.'
+							/>
 						</div>
 					</div>
 				</form>

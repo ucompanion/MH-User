@@ -2,6 +2,7 @@ import React, { ReactNode } from 'react';
 
 interface InputProps {
     className: string,
+    classNameInput?: string,
     type?: string,
     name?: string,
     id?: string,
@@ -14,6 +15,7 @@ interface InputProps {
 
 const Input: React.FC<InputProps> = ({
     className,
+    classNameInput = '',
     type = 'text',
     name,
     id,
@@ -29,7 +31,7 @@ const Input: React.FC<InputProps> = ({
                 type={type}
                 name={name}
                 id={id}
-                className='input'
+                className={'input ' + classNameInput}
                 value={value}
                 placeholder={placeholder}
                 disabled={disabled}

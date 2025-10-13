@@ -1,3 +1,5 @@
+import { Input } from "../../../../components/ui";
+
 const SecFind = () => {
 	return (
 		<section className='section module-b sigin-find-sec'>
@@ -13,9 +15,11 @@ const SecFind = () => {
 						</div>
 						<div className="frm-content">
 							<div className="frm-controls">
-								<div className="frm-input module-a flex-a">
-									<input type="text" className="input" id="frmMail" placeholder="이메일을 입력해주세요." />
-								</div>
+								<Input
+									className='module-a flex-a'
+									id="frmMail"
+									placeholder='이메일을 입력해주세요.'
+								/>
 								<button type="button" className="btn module-b fill-dark">
 									<span>인증</span>
 								</button>
