@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 
 interface RadioProps {
-    module: String,
+    className: String,
     name: string,
     checked: boolean,
     disabled: boolean,
@@ -9,10 +9,9 @@ interface RadioProps {
     children?: ReactNode;
 }
 
-const Radio: React.FC<RadioProps> = ({ module, name, checked, disabled, onClick, children }) => {
-    const className = `frm-radio ${module}`;
+const Radio: React.FC<RadioProps> = ({ className, name, checked, disabled, onClick, children }) => {
     return (
-        <label className={className}>
+        <label className={'frm-checkbox ' + className}>
             <input
                 type="radio"
                 className='radio'

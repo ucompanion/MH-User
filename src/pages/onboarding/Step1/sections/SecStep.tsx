@@ -14,7 +14,7 @@ const SecStep = () => {
                 <div className='frm-checkbox-group demo-b'>
                     <Radio
                         name="onboardingStep1"
-                        module="demo-b"
+                        className="module-b"
                         checked={stepRadio === 'radio11'}
                         disabled={false}
                         onClick={()=>{setStepRadio('radio11')}}
@@ -24,7 +24,7 @@ const SecStep = () => {
                     </Radio>
                     <Radio
                         name="onboardingStep1"
-                        module="demo-b"
+                        className="module-b"
                         checked={stepRadio === 'radio12'}
                         disabled={false}
                         onClick={()=>{setStepRadio('radio12')}}

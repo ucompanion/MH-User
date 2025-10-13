@@ -356,7 +356,7 @@ const SecStepB = ({ onSelectedItemsChange, pageActionHeight }: MyCustomScrollspy
                                                 <div className="dep2-chk">
                                                     <Checkbox
                                                         name="procedureChk" // name 변경: regionChk -> procedureChk 등 더 적절한 이름으로
-                                                        module="demo-a"
+                                                        className="module-a"
                                                         value={dep2Item.id}
                                                         checked={selectedItems[dep2Item.id] || false}
                                                         onChange={() => handleCheckboxClick(dep2Item.id)}
@@ -372,7 +372,7 @@ const SecStepB = ({ onSelectedItemsChange, pageActionHeight }: MyCustomScrollspy
                                                                 <div className="dep3-chk">
                                                                     <Checkbox
                                                                         name="procedureChk"
-                                                                        module="demo-a"
+                                                                        className="module-a"
                                                                         value={dep3Item.id}
                                                                         checked={selectedItems[dep3Item.id] || false}
                                                                         onChange={() => handleCheckboxClick(dep3Item.id)}

@@ -48,7 +48,7 @@ const SecStepA = () => {
                     {regionItemsData.map((item) => (
                         <Checkbox
                             name="regionChk"
-                            module="demo-c"
+                            className="module-c"
                             key={item.id}
                             value={item.id}
                             checked={regiongChk[item.id] || false}

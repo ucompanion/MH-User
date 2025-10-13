@@ -266,7 +266,7 @@
 	}
 
 	// demo-a
-	&.demo-a {
+	&.module-a {
 		display: flex;
 		gap: 8rem;
 
@@ -307,7 +307,7 @@
 	}
 
 	// demo-b
-	&.demo-b {
+	&.module-b {
 		position: relative;
 		display: flex;
 		align-items: center;
@@ -389,7 +389,7 @@
 	}
 
 	// demo-c
-	&.demo-c {
+	&.module-c {
 		flex: none;
 		position: relative;
 		display: inline-flex;

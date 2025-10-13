@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 
 interface CheckboxProps {
-    module: String,
+    className: String,
     name: string,
     value?: string,
     checked: boolean,
@@ -11,10 +11,9 @@ interface CheckboxProps {
     children?: ReactNode;
 }
 
-const Checkbox: React.FC<CheckboxProps> = ({ module, name, value, checked, disabled, onClick, onChange, children }) => {
-    const className = `frm-checkbox ${module}`;
+const Checkbox: React.FC<CheckboxProps> = ({ className, name, value, checked, disabled, onClick, onChange, children }) => {
     return (
-        <label className={className}>
+        <label className={'frm-checkbox ' + className}>
             <input
                 type="checkbox"
                 name={name}

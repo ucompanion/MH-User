@@ -40,7 +40,7 @@ const SecStepB = () => {
                         <li className='region-item' key={item.id}>
                             <Checkbox
                                 name="regionChk"
-                                module="region"
+                                className="region"
                                 value={item.id}
                                 checked={regiongChk[item.id] || false}
                                 disabled={false}

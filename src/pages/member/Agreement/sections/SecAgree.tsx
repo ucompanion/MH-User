@@ -20,7 +20,7 @@ const SecAgree = () => {
 						<div className="agree-item">
 							<Checkbox
 								name="agreeCheckboxAll"
-								module="demo-a"
+								className="module-a"
 								checked={agreeChkAll}
 								disabled={false}
 								onClick={()=>{setAgreeChkAll(!agreeChkAll)}}
@@ -33,7 +33,7 @@ const SecAgree = () => {
 						<li className="agree-item">
 							<Checkbox
 								name="agreeCheckboxItem"
-								module="demo-a"
+								className="module-a"
 								checked={agreeChkItem1}
 								disabled={false}
 								onClick={()=>{setAgreeChkItem1(!agreeChkItem1)}}
@@ -47,7 +47,7 @@ const SecAgree = () => {
 						<li className="agree-item">
 							<Checkbox
 								name="agreeCheckboxItem"
-								module="demo-a"
+								className="module-a"
 								checked={agreeChkItem2}
 								disabled={false}
 								onClick={()=>{setAgreeChkItem2(!agreeChkItem2)}}
@@ -61,7 +61,7 @@ const SecAgree = () => {
 						<li className="agree-item">
 							<Checkbox
 								name="agreeCheckboxItem"
-								module="demo-a"
+								className="module-a"
 								checked={agreeChkItem3}
 								disabled={false}
 								onClick={()=>{setAgreeChkItem3(!agreeChkItem3)}}
@@ -75,7 +75,7 @@ const SecAgree = () => {
 						<li className="agree-item">
 							<Checkbox
 								name="agreeCheckboxItem"
-								module="demo-a"
+								className="module-a"
 								checked={agreeChkItem4}
 								disabled={false}
 								onClick={()=>{setAgreeChkItem4(!agreeChkItem4)}}

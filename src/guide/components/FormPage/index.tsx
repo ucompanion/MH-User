@@ -1,4 +1,4 @@
-import { Checkbox, Radio, Icon } from '../../../components/ui';
+import { Checkbox, Radio, Icon, Input, Textarea } from '../../../components/ui';
 import { PageBody,  PageHeader } from '../../../components/layouts';
 import { useState } from 'react';
 
@@ -56,31 +56,46 @@ const FormPage = () => {
 					</div>
 					<div className="section-body">
 						<h3 className="content-h3">demo-a</h3>
-						<div className='frm-input module-a'>
-							<input type="text" className='input' placeholder='Placeholder' />
-						</div>
+						<Input
+							className='module-a'
+							placeholder='Placeholder'
+						/>
 						<br />
-						<div className='frm-input module-a'>
-							<input type="text" className='input' value={"Valued"} />
-						</div>
+						<Input
+							className='module-a'
+							placeholder='Placeholder'
+							value={"Valued"}
+						/>
 						<br />
-						<div className='frm-input module-a'>
-							<input type="text" className='input' value={"Disabled"} disabled />
-						</div>
+						<Input
+							className='module-a'
+							placeholder='Placeholder'
+							value={"Disabled"}
+							disabled={true}
+						/>
 						<br />
-						<div className='frm-input module-a is-errored'>
-							<input type="text" className='input' value={"Errored"} />
-						</div>
+						<Input
+							className='module-a is-errored'
+							placeholder='Placeholder'
+							value={"Errored"}
+						/>
 						<br />
-						<div className='frm-input module-a'>
-							<textarea name="" id="" cols={10} rows={5} className='textarea'></textarea>
-							<p className='bytes'><span className="count">0</span> / <span className="total">100Bytes</span></p>
-						</div>
+						<Textarea
+							className='module-a'
+							placeholder='Placeholder'
+							cols={20}
+							rows={5}
+						/>
 						<br />
-						<div className='frm-input module-a'>
-							<textarea name="" id="" cols={10} rows={5} className='textarea'></textarea>
-							<p className='bytes'><span className="count">0</span> / <span className="total">100Bytes</span></p>
-						</div>
+						<Textarea
+							className='module-a'
+							placeholder='Placeholder'
+							cols={20}
+							rows={5}
+							hasByte={true}
+							totalByte={100}
+							value={'Valued'}
+						/>
 
 						{/* <h3 className="content-h3">Select</h3> */}
 						<br />
@@ -133,7 +148,7 @@ const FormPage = () => {
 						<div className='frm-checkbox-group demo-a'>
 							<Checkbox
 								name="demo1Checkbox"
-								module="demo-a"
+								className="module-a"
 								checked={checkbox11}
 								disabled={false}
 								onClick={()=>{setCheckbox11(!checkbox11)}}
@@ -142,7 +157,7 @@ const FormPage = () => {
 							</Checkbox>
 							<Checkbox
 								name="demo1Checkbox"
-								module="demo-a"
+								className="module-a"
 								checked={checkbox12}
 								disabled={false}
 								onClick={()=>{setCheckbox12(!checkbox12)}}
@@ -151,7 +166,7 @@ const FormPage = () => {
 							</Checkbox>
 							<Checkbox
 								name="demo1Checkbox"
-								module="demo-a"
+								className="module-a"
 								checked={checkbox13}
 								disabled={true}
 								onClick={()=>{setCheckbox13(!checkbox13)}}
@@ -160,7 +175,7 @@ const FormPage = () => {
 							</Checkbox>
 							<Checkbox
 								name="demo1Checkbox"
-								module="demo-a"
+								className="module-a"
 								checked={checkbox14}
 								disabled={true}
 								onClick={()=>{setCheckbox14(!checkbox14)}}
@@ -172,7 +187,7 @@ const FormPage = () => {
 						<div className='frm-radio-group demo-a'>
 							<Radio
 								name="demo1Radio1"
-								module="demo-a"
+								className="module-a"
 								checked={radio11 === 'radio11'}
 								disabled={false}
 								onClick={()=>{setRadio11('radio11')}}
@@ -181,7 +196,7 @@ const FormPage = () => {
 							</Radio>
 							<Radio
 								name="demo1Radio1"
-								module="demo-a"
+								className="module-a"
 								checked={radio11 === 'radio12'}
 								disabled={false}
 								onClick={()=>{setRadio11('radio12')}}
@@ -190,7 +205,7 @@ const FormPage = () => {
 							</Radio>
 							<Radio
 								name="demo1radio1"
-								module="demo-a"
+								className="module-a"
 								checked={radio12 === 'radio11'}
 								disabled={true}
 								onClick={()=>{setRadio12('radio11')}}
@@ -199,7 +214,7 @@ const FormPage = () => {
 							</Radio>
 							<Radio
 								name="demo1radio1"
-								module="demo-a"
+								className="module-a"
 								checked={radio12 === 'radio12'}
 								disabled={true}
 								onClick={()=>{setRadio12('radio12')}}
@@ -212,7 +227,7 @@ const FormPage = () => {
 						<div className='frm-checkbox-group demo-b'>
 							<Checkbox
 								name="demo2Checkbox"
-								module="demo-b"
+								className="module-b"
 								checked={checkbox21}
 								disabled={false}
 								onClick={()=>{setCheckbox21(!checkbox21)}}
@@ -222,7 +237,7 @@ const FormPage = () => {
 							</Checkbox>
 							<Checkbox
 								name="demo2Checkbox"
-								module="demo-b"
+								className="module-b"
 								checked={checkbox22}
 								disabled={false}
 								onClick={()=>{setCheckbox22(!checkbox22)}}
@@ -231,7 +246,7 @@ const FormPage = () => {
 							</Checkbox>
 							<Checkbox
 								name="demo2Checkbox"
-								module="demo-b"
+								className="module-b"
 								checked={checkbox23}
 								disabled={true}
 								onClick={()=>{setCheckbox23(!checkbox23)}}
@@ -240,7 +255,7 @@ const FormPage = () => {
 							</Checkbox>
 							<Checkbox
 								name="demo2Checkbox"
-								module="demo-b"
+								className="module-b"
 								checked={checkbox24}
 								disabled={true}
 								onClick={()=>{setCheckbox24(!checkbox24)}}
@@ -252,7 +267,7 @@ const FormPage = () => {
 						<div className='frm-radio-group demo-b'>
 							<Radio
 								name="demo2Radio1"
-								module="demo-b"
+								className="module-b"
 								checked={radio21 === 'radio11'}
 								disabled={false}
 								onClick={()=>{setRadio21('radio11')}}
@@ -261,7 +276,7 @@ const FormPage = () => {
 							</Radio>
 							<Radio
 								name="demo2Radio1"
-								module="demo-b"
+								className="module-b"
 								checked={radio21 === 'radio12'}
 								disabled={false}
 								onClick={()=>{setRadio21('radio12')}}
@@ -270,7 +285,7 @@ const FormPage = () => {
 							</Radio>
 							<Radio
 								name="demo2Radio2"
-								module="demo-b"
+								className="module-b"
 								checked={radio22 === 'radio21'}
 								disabled={true}
 								onClick={()=>{setRadio22('radio21')}}
@@ -279,7 +294,7 @@ const FormPage = () => {
 							</Radio>
 							<Radio
 								name="demo2Radio2"
-								module="demo-b"
+								className="module-b"
 								checked={radio22 === 'radio22'}
 								disabled={true}
 								onClick={()=>{setRadio22('radio22')}}
@@ -292,7 +307,7 @@ const FormPage = () => {
 						<div className='frm-checkbox-group demo-c'>
 							<Checkbox
 								name="demo3Checkbox"
-								module="demo-c"
+								className="module-c"
 								checked={checkbox31}
 								disabled={false}
 								onClick={()=>{setCheckbox31(!checkbox31)}}
@@ -301,7 +316,7 @@ const FormPage = () => {
 							</Checkbox>
 							<Checkbox
 								name="demo3Checkbox"
-								module="demo-c"
+								className="module-c"
 								checked={checkbox32}
 								disabled={false}
 								onClick={()=>{setCheckbox32(!checkbox32)}}
@@ -310,7 +325,7 @@ const FormPage = () => {
 							</Checkbox>
 							<Checkbox
 								name="demo3Checkbox"
-								module="demo-c"
+								className="module-c"
 								checked={checkbox33}
 								disabled={true}
 								onClick={()=>{setCheckbox33(!checkbox33)}}
@@ -319,7 +334,7 @@ const FormPage = () => {
 							</Checkbox>
 							<Checkbox
 								name="demo3Checkbox"
-								module="demo-c"
+								className="module-c"
 								checked={checkbox34}
 								disabled={true}
 								onClick={()=>{setCheckbox34(!checkbox34)}}
@@ -331,7 +346,7 @@ const FormPage = () => {
 						<div className='frm-radio-group demo-c'>
 							<Radio
 								name="demo3Radio1"
-								module="demo-c"
+								className="module-c"
 								checked={radio31 === 'radio11'}
 								disabled={false}
 								onClick={()=>{setRadio31('radio11')}}
@@ -340,7 +355,7 @@ const FormPage = () => {
 							</Radio>
 							<Radio
 								name="demo3Radio1"
-								module="demo-c"
+								className="module-c"
 								checked={radio31 === 'radio12'}
 								disabled={false}
 								onClick={()=>{setRadio31('radio12')}}
@@ -349,7 +364,7 @@ const FormPage = () => {
 							</Radio>
 							<Radio
 								name="demo3Radio3"
-								module="demo-c"
+								className="module-c"
 								checked={radio32 === 'radio31'}
 								disabled={true}
 								onClick={()=>{setRadio32('radio31')}}
@@ -358,7 +373,7 @@ const FormPage = () => {
 							</Radio>
 							<Radio
 								name="demo3Radio3"
-								module="demo-c"
+								className="module-c"
 								checked={radio32 === 'radio32'}
 								disabled={true}
 								onClick={()=>{setRadio32('radio32')}}

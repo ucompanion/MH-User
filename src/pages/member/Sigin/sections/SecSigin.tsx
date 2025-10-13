@@ -36,7 +36,7 @@ const SecSigin = () => {
 					<div className="session-chk">
 						<Checkbox
 							name="loginSesionChk"
-							module="demo-a"
+							className="module-a"
 							checked={loginSesionChk}
 							disabled={false}
 							onClick={()=>{setloginSesionChk(!loginSesionChk)}}
